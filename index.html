@@ -1,155 +1,384 @@
 <!DOCTYPE html>
-<html lang="te" data-lang="te" data-theme="light">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title class="lang-te">ఆంధ్ర క్రిస్టియన్ చర్చ్ | ముంబై</title>
-  <title class="lang-en" style="display: none;">Andhra Christian Church | Mumbai</title>
-  <meta name="description" content="ఆంధ్ర క్రిస్టియన్ చర్చ్, అంధేరి ఈస్ట్, ముంబై. ఆరాధన సమయాలు, చిరునామా మరియు సంప్రదింపు వివరాలు.">
-  
-  <!-- Google Fonts - Telugu and Sans support -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Ramabhadra&display=swap" rel="stylesheet">
-  
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andhra Christian Church | Mumbai</title>
+    <meta name="description" content="Welcome to Andhra Christian Church, Andheri East, Mumbai. Join us for Sunday Worship, Wednesday Youth Prayer, Friday Womens Fellowship, and Sunday School.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="minimalist-layout">
-  
-  <!-- Full Screen Background with hero.png -->
-  <div class="minimalist-bg" style="background-image: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.75)), url('hero.png');"></div>
-
-  <!-- Minimalist Floating Header for switches -->
-  <header class="minimalist-header">
-    <div class="header-switches">
-      <!-- Language Switch -->
-      <button id="lang-toggle" class="btn btn-secondary btn-sm lang-btn" aria-label="Switch language">
-        <i data-lucide="languages" class="inline-icon-xs mr-1"></i>
-        <span class="lang-te">English</span>
-        <span class="lang-en">తెలుగు</span>
-      </button>
-      <!-- Theme Switch -->
-      <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">
-        <i data-lucide="moon" class="theme-icon-dark"></i>
-        <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
-      </button>
-    </div>
-  </header>
-
-  <!-- Central Glassmorphic Info Card -->
-  <main class="minimalist-main">
-    <div class="info-card-container reveal">
-      <!-- Church Brand -->
-      <div class="church-brand">
-        <div class="church-cross-logo"><i data-lucide="cross"></i></div>
-        <h1 class="church-name">
-          <span class="lang-te">ఆంధ్ర క్రిస్టియన్ చర్చ్</span>
-          <span class="lang-en">Andhra Christian Church</span>
-        </h1>
-        <p class="church-tagline">
-          <span class="lang-te">ముంబై తెలుగు క్రైస్తవ ఆరాధన సంఘం</span>
-          <span class="lang-en">Telugu Christian Fellowship, Mumbai</span>
-        </p>
-      </div>
-
-      <hr class="card-divider">
-
-      <!-- Timings Section -->
-      <div class="card-section">
-        <h2 class="section-title-sm">
-          <i data-lucide="calendar-days" class="section-icon"></i>
-          <span class="lang-te">ఆరాధన సమయాలు</span>
-          <span class="lang-en">Service Timings</span>
-        </h2>
-        <div class="timings-list">
-          <div class="timing-row">
-            <span class="day-label">
-              <span class="lang-te">ఆదివారం</span>
-              <span class="lang-en">Sunday</span>
-            </span>
-            <span class="time-label">
-              <span class="lang-te">ఉదయం 11:30 నుండి మధ్యాహ్నం 2:00 వరకు</span>
-              <span class="lang-en">11:30 AM to 2:00 PM</span>
-            </span>
-          </div>
-          <div class="timing-row">
-            <span class="day-label">
-              <span class="lang-te">बुధవారం/బుధవారం</span>
-              <span class="lang-en">Wednesday</span>
-            </span>
-            <span class="time-label">
-              <span class="lang-te">రాత్రి 8:30 నుండి రాత్రి 10:00 వరకు</span>
-              <span class="lang-en">8:30 PM to 10:00 PM</span>
-            </span>
-          </div>
-          <div class="timing-row">
-            <span class="day-label">
-              <span class="lang-te">शुक्रవారం/శుక్రవారం</span>
-              <span class="lang-en">Friday</span>
-            </span>
-            <span class="time-label">
-              <span class="lang-te">మధ్యాహ్నం 2:30 నుండి సాయంత్రం 5:00 వరకు</span>
-              <span class="lang-en">2:30 PM to 5:00 PM</span>
-            </span>
-          </div>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo-link">
+                <img src="assets/logo.png" alt="ACC Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">Andhra Christian Church</span>
+                    <span class="logo-subtitle" data-i18n="nav_logo_subtitle">Mumbai</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active" data-i18n="nav_home">Home</a>
+                <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+                <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
+                <a href="#location" class="nav-link" data-i18n="nav_location">Location</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <div class="lang-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="te">తెలుగు</button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                    <i data-lucide="moon" class="theme-icon-dark"></i>
+                    <i data-lucide="sun" class="theme-icon-light"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open navigation menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
         </div>
-      </div>
+    </header>
 
-      <hr class="card-divider">
-
-      <!-- Location Section -->
-      <div class="card-section">
-        <h2 class="section-title-sm">
-          <i data-lucide="map-pin" class="section-icon"></i>
-          <span class="lang-te">మా చిరునామా</span>
-          <span class="lang-en">Our Location</span>
-        </h2>
-        <p class="address-text">
-          <span class="lang-te">పంప్ హౌస్, 93, జీజామాతా రోడ్, సాల్సెట్ పార్సీ కాలనీ, అంధేరి ఈస్ట్, ముంబై, మహారాష్ట్ర 400093</span>
-          <span class="lang-en">Pump House, 93, Jijamata Rd, Salsette Parsi Colony, Andheri East, Mumbai, Maharashtra 400093</span>
-        </p>
-        <a href="https://www.google.com/maps/place/Andhra+Christian+Church+(%E0%B0%A4%E0%B1%86%E0%B0%B2%E0%B1%81%E0%B0%97%E0%B1%81)/@19.1262802,72.8568212,17z" target="_blank" rel="noopener noreferrer" class="btn btn-primary map-action-btn">
-          <i data-lucide="navigation" class="inline-icon-xs mr-2"></i>
-          <span class="lang-te">దారి మ్యాప్ చూడండి</span>
-          <span class="lang-en">Get Directions</span>
-        </a>
-      </div>
-
-      <hr class="card-divider">
-
-      <!-- Contact Info Section -->
-      <div class="card-section">
-        <h2 class="section-title-sm">
-          <i data-lucide="phone" class="section-icon"></i>
-          <span class="lang-te">సంప్రదించండి</span>
-          <span class="lang-en">Contact Info</span>
-        </h2>
-        <div class="contact-details">
-          <div class="contact-line">
-            <span class="contact-label"><i data-lucide="mail"></i></span>
-            <a href="mailto:hello@andhrachristianchurch.in" class="contact-link">hello@andhrachristianchurch.in</a>
-          </div>
-          <div class="contact-line">
-            <span class="contact-label"><i data-lucide="phone-call"></i></span>
-            <a href="tel:02298765432" class="contact-link">022-98765432</a>
-          </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-accent"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i data-lucide="church" class="badge-icon"></i>
+                    <span data-i18n="hero_badge">Welcoming Community</span>
+                </div>
+                <h1 class="hero-title" data-i18n="hero_title">Grace, Truth, and Community in Mumbai</h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Welcome to Andhra Christian Church. We are a family of faith dedicated to loving God, serving our community, and sharing the hope of Christ.</p>
+                <div class="hero-actions">
+                    <a href="#services" class="btn btn-primary">
+                        <span data-i18n="hero_btn_services">Join Our Services</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="https://maps.app.goo.gl/Brkw3HtSPAYYxnMK8" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <i data-lucide="map-pin"></i>
+                        <span data-i18n="hero_btn_directions">Get Directions</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glass-card hero-glass-card">
+                    <div class="next-service-indicator" id="next-service-banner">
+                        <span class="indicator-dot"></span>
+                        <span class="indicator-text" id="next-service-text" data-i18n="checking_service">Checking next service...</span>
+                    </div>
+                    <div class="church-symbol">
+                        <img src="assets/logo.png" alt="ACC Cross Logo" class="hero-logo-img">
+                    </div>
+                    <div class="quick-timings">
+                        <div class="quick-timing-item">
+                            <span class="q-day" data-i18n="hero_school_title">Sunday School</span>
+                            <span class="q-time" data-i18n="hero_school_time">9:00 AM – 11:00 AM</span>
+                        </div>
+                        <div class="quick-timing-item">
+                            <span class="q-day" data-i18n="hero_worship_title">Sunday Worship</span>
+                            <span class="q-time" data-i18n="hero_worship_time">11:00 AM – 2:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Copyright -->
-      <footer class="card-footer">
-        <p>
-          <span class="lang-te">&copy; 2026 ఆంధ్ర క్రిస్టియన్ చర్చ్. అన్ని హక్కులు ప్రత్యేకించబడ్డాయి.</span>
-          <span class="lang-en">&copy; 2026 Andhra Christian Church. All rights reserved.</span>
-        </p>
-      </footer>
-    </div>
-  </main>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="about_tag">Who We Are</span>
+                <h2 class="section-title" data-i18n="about_title">Our Fellowship</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="lead-text" data-i18n="about_lead">Andhra Christian Church in Mumbai is a vibrant fellowship of believers sharing fellowship, faith, and prayer in Andheri East.</p>
+                    <p data-i18n="about_p1">Established as a spiritual sanctuary for Telugu-speaking and diverse Christian communities in Mumbai, we gather to worship in truth, support one another in love, and nurture the spiritual growth of all generations.</p>
+                    <p data-i18n="about_p2">Whether you are visiting, seeking a spiritual home, or looking for prayer support, our doors and hearts are open to you.</p>
+                    
+                    <div class="pillars-grid">
+                        <div class="pillar-card">
+                            <div class="pillar-icon-wrapper">
+                                <i data-lucide="heart" class="pillar-icon"></i>
+                            </div>
+                            <h3 data-i18n="about_pillar_worship_title">Worship & Love</h3>
+                            <p data-i18n="about_pillar_worship_desc">Proclaiming Christ's message and praising God in unity.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon-wrapper">
+                                <i data-lucide="users-2" class="pillar-icon"></i>
+                            </div>
+                            <h3 data-i18n="about_pillar_community_title">Community</h3>
+                            <p data-i18n="about_pillar_community_desc">A loving family bound together by Christian fellowship.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-highlights">
+                    <div class="glass-card highlight-card">
+                        <h3 class="highlight-title" data-i18n="about_faith_title">Statement of Faith</h3>
+                        <p class="highlight-desc" data-i18n="about_faith_desc">We believe in the Holy Scriptures, the triune God, salvation through Jesus Christ, and the spiritual unity of believers in worship and action.</p>
+                        <div class="scripture-quote">
+                            <p data-i18n="about_scripture_quote">"For where two or three gather in my name, there am I with them."</p>
+                            <span class="scripture-ref" data-i18n="about_scripture_ref">Matthew 18:20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="app.js"></script>
+    <!-- Services / Timings Section -->
+    <section id="services" class="services-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="services_tag">Gatherings</span>
+                <h2 class="section-title" data-i18n="services_title">Weekly Schedule</h2>
+                <p class="section-subtitle" data-i18n="services_subtitle">Join us for worship, prayer, and fellowship throughout the week. All are welcome.</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="schedule-grid">
+                <!-- Sunday School Card -->
+                <div class="schedule-card" data-day="0" data-start="09:00" data-end="11:00" id="service-sunday-school">
+                    <div class="card-status-badge" data-i18n="card_status_next">Next Service</div>
+                    <div class="schedule-icon-wrapper">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <h3 class="service-name" data-i18n="services_school_title">Sunday School</h3>
+                    <div class="service-time">
+                        <i data-lucide="clock"></i>
+                        <span>9:00 AM – 11:00 AM</span>
+                    </div>
+                    <div class="service-day-label" data-i18n="day_sunday">Sunday</div>
+                    <p class="service-desc" data-i18n="services_school_desc">Spiritual education and activities for children, nurturing faith in their early years.</p>
+                </div>
+
+                <!-- Sunday Worship Card -->
+                <div class="schedule-card" data-day="0" data-start="11:00" data-end="14:00" id="service-sunday-worship">
+                    <div class="card-status-badge" data-i18n="card_status_next">Next Service</div>
+                    <div class="schedule-icon-wrapper">
+                        <i data-lucide="flame"></i>
+                    </div>
+                    <h3 class="service-name" data-i18n="services_worship_title">Sunday Worship</h3>
+                    <div class="service-time">
+                        <i data-lucide="clock"></i>
+                        <span>11:00 AM – 2:00 PM</span>
+                    </div>
+                    <div class="service-day-label" data-i18n="day_sunday">Sunday</div>
+                    <p class="service-desc" data-i18n="services_worship_desc">Our main gathering featuring congregational singing, prayer, and message from the Word.</p>
+                </div>
+
+                <!-- Wednesday Youth Prayer Card -->
+                <div class="schedule-card" data-day="3" data-start="20:00" data-end="22:00" id="service-wednesday-prayer">
+                    <div class="card-status-badge" data-i18n="card_status_next">Next Service</div>
+                    <div class="schedule-icon-wrapper">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3 class="service-name" data-i18n="services_youth_title">Youth Prayer</h3>
+                    <div class="service-time">
+                        <i data-lucide="clock"></i>
+                        <span>8:00 PM – 10:00 PM</span>
+                    </div>
+                    <div class="service-day-label" data-i18n="day_wednesday">Wednesday</div>
+                    <p class="service-desc" data-i18n="services_youth_desc">Mid-week service focusing on the spiritual growth, fellowship, and guidance of our youth.</p>
+                </div>
+
+                <!-- Friday Womens Fellowship Card -->
+                <div class="schedule-card" data-day="5" data-start="15:00" data-end="18:00" id="service-friday-meeting">
+                    <div class="card-status-badge" data-i18n="card_status_next">Next Service</div>
+                    <div class="schedule-icon-wrapper">
+                        <i data-lucide="users-2"></i>
+                    </div>
+                    <h3 class="service-name" data-i18n="services_womens_title">Womens Fellowship</h3>
+                    <div class="service-time">
+                        <i data-lucide="clock"></i>
+                        <span>3:00 PM – 6:00 PM</span>
+                    </div>
+                    <div class="service-day-label" data-i18n="day_friday">Friday</div>
+                    <p class="service-desc" data-i18n="services_womens_desc">Weekly gathering dedicated to empowering women of the church through scripture, prayer, and support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="location_tag">Visit Us</span>
+                <h2 class="section-title" data-i18n="location_title">Where We Meet</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="location-grid">
+                <div class="location-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="info-details">
+                            <h3 data-i18n="location_address_title">Address</h3>
+                            <p>Andhra Christian Church</p>
+                            <p>Pumphouse, Andheri East,</p>
+                            <p>Mumbai, Maharashtra, India</p>
+                            <a href="https://maps.app.goo.gl/Brkw3HtSPAYYxnMK8" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="margin-top: 0.75rem; display: inline-flex; width: fit-content; padding: 0.35rem 0.75rem;">
+                                <span data-i18n="location_maps_btn">Open Google Maps</span>
+                                <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i data-lucide="compass"></i>
+                        </div>
+                        <div class="info-details">
+                            <h3 data-i18n="location_getting_here_title">Getting Here</h3>
+                            <p><strong data-i18n="location_train">By Train:</strong><span data-i18n="location_train_desc"> Nearest station is Andheri East (Western Line / Metro Line 1).</span></p>
+                            <p><strong data-i18n="location_road">By Road:</strong><span data-i18n="location_road_desc"> Located near Pump House, easily accessible via Western Express Highway.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="info-details">
+                            <h3 data-i18n="location_contact_title">Contact Info</h3>
+                            <p><strong data-i18n="location_phone">Phone:</strong> <a href="tel:+919867631523" style="color: var(--primary); font-weight: 600;">+91 98676 31523</a></p>
+                            <p><strong data-i18n="location_email">Email:</strong> contact@andhrachristianchurchmumbai.org</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-map">
+                    <div class="map-wrapper">
+                        <!-- Standard embedded map for Pump House, Andheri East, Mumbai -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.7562852206786!2d72.86377757584168!3d19.11835948210156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c83cf134bbcd%3A0xe54e602b9e64e52f!2sPump%20House%2C%20Andheri%20East%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1718320000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Andhra Christian Church Location Map">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Prayer Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="contact_tag">Reach Out</span>
+                <h2 class="section-title" data-i18n="contact_title">Prayer & Inquiries</h2>
+                <p class="section-subtitle" data-i18n="contact_subtitle">How can we pray for you? Send us your prayer requests or contact us with any questions.</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contact-form-container glass-card">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="form-name" data-i18n="contact_label_name">Your Name</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="user"></i>
+                                <input type="text" id="form-name" placeholder="John Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email" data-i18n="contact_label_email">Email Address</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="mail"></i>
+                                <input type="email" id="form-email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-subject" data-i18n="contact_label_subject">Subject</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="tag"></i>
+                            <select id="form-subject" required>
+                                <option value="" disabled selected data-i18n="contact_subject_placeholder">Select an option</option>
+                                <option value="prayer" data-i18n="contact_subject_prayer">Prayer Request</option>
+                                <option value="visit" data-i18n="contact_subject_visit">Visiting the Church</option>
+                                <option value="general" data-i18n="contact_subject_general">General Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-message" data-i18n="contact_label_message">Message / Prayer Request</label>
+                        <textarea id="form-message" data-i18n="contact_message_placeholder" rows="5" placeholder="Share your message or prayer request with us..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                        <span data-i18n="contact_btn_send">Send Message</span>
+                        <i data-lucide="send" id="submit-icon"></i>
+                    </button>
+                </form>
+
+                <div class="success-message" id="success-message">
+                    <div class="success-icon-wrapper">
+                        <i data-lucide="check-circle-2"></i>
+                    </div>
+                    <h3 data-i18n="contact_success_title">Thank You!</h3>
+                    <p data-i18n="contact_success_desc">Your message has been received. Our prayer team and pastors will pray for you. If you requested contact, we will get back to you shortly.</p>
+                    <button class="btn btn-secondary btn-sm" id="reset-form-btn" data-i18n="contact_btn_reset">Send Another Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="ACC Logo" class="footer-logo">
+                <div>
+                    <span class="footer-title">Andhra Christian Church</span>
+                    <span class="footer-subtitle" data-i18n="footer_subtitle">Pumphouse, Andheri East, Mumbai</span>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="#hero" data-i18n="nav_home">Home</a>
+                <a href="#about" data-i18n="nav_about">About</a>
+                <a href="#services" data-i18n="nav_services">Services</a>
+                <a href="#location" data-i18n="nav_location">Location</a>
+                <a href="#contact" data-i18n="nav_contact">Contact</a>
+            </div>
+
+            <p class="footer-copyright">&copy; <span id="current-year">2026</span><span data-i18n="footer_copyright_suffix"> Andhra Christian Church, Mumbai. All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- App Scripts -->
+    <script src="translations.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
