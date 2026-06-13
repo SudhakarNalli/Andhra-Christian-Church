@@ -3,6 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
   lucide.createIcons();
 
   /* ==========================================================================
+     Language Toggle (Telugu / English)
+     ========================================================================== */
+  const langToggleBtn = document.getElementById('lang-toggle');
+  
+  // Set default language or retrieve saved preference
+  const savedLang = localStorage.getItem('lang') || 'te';
+  setLanguage(savedLang);
+
+  langToggleBtn.addEventListener('click', () => {
+    const currentLang = document.documentElement.getAttribute('data-lang');
+    const newLang = currentLang === 'te' ? 'en' : 'te';
+    setLanguage(newLang);
+  });
+
+  function setLanguage(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    localStorage.setItem('lang', lang);
+  }
+
+  /* ==========================================================================
      Theme Toggle (Light / Dark Mode)
      ========================================================================== */
   const themeToggleBtn = document.getElementById('theme-toggle');
@@ -170,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePlayerUI();
   });
 
-  // Archive Item Switcher
+  // Archive Item Switcher (Bilingual adaptation)
   archiveItems.forEach(item => {
     item.addEventListener('click', () => {
       // Remove active from others
@@ -178,12 +198,14 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.add('active-archive-item');
 
       // Load sermon details
-      const title = item.getAttribute('data-title');
-      const speaker = item.getAttribute('data-speaker');
+      const titleTe = item.getAttribute('data-title-te');
+      const titleEn = item.getAttribute('data-title-en');
+      const speakerTe = item.getAttribute('data-speaker-te');
+      const speakerEn = item.getAttribute('data-speaker-en');
       const durationStr = item.getAttribute('data-duration');
 
-      sermonTitle.textContent = title;
-      sermonSpeaker.textContent = `${speaker} • సిరీస్: విశ్వాసం & కృప`;
+      sermonTitle.innerHTML = `<span class="lang-te">${titleTe}</span><span class="lang-en">${titleEn}</span>`;
+      sermonSpeaker.innerHTML = `<span class="lang-te">${speakerTe} • సిరీస్: విశ్వాసం & కృప</span><span class="lang-en">${speakerEn} • Series: Faith & Grace</span>`;
       sermonDuration = parseDurationString(durationStr);
       currentTime = 0;
       
@@ -224,23 +246,33 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     Giving Widget Calculator
+     Giving Widget Calculator (Bilingual adaptation)
      ========================================================================== */
   const amountBtns = document.querySelectorAll('.amount-btn');
   const customAmountContainer = document.getElementById('custom-amount-container');
   const customAmountInput = document.getElementById('custom-amount-input');
+  
+  // Telugu Total references
   const selectedTotalVal = document.getElementById('selected-total-val');
   const selectedFreqVal = document.getElementById('selected-freq-val');
+  
+  // English Total references
+  const selectedTotalValEn = document.getElementById('selected-total-val-en');
+  const selectedFreqValEn = document.getElementById('selected-freq-val-en');
   
   const freqOneTime = document.getElementById('freq-one-time');
   const freqMonthly = document.getElementById('freq-monthly');
   
   const btnSubmitGiving = document.getElementById('btn-submit-giving');
   const givingSuccessOverlay = document.getElementById('giving-success-overlay');
+  
+  // Success amount displays
   const successAmountVal = document.getElementById('success-amount-val');
+  const successAmountValEn = document.getElementById('success-amount-val-en');
+  
   const btnResetGiving = document.getElementById('btn-reset-giving');
 
-  let selectedAmount = 500; // default active button
+  let selectedAmount = 500; // default active button (₹500)
   let selectedFrequency = 'one-time';
 
   // Toggle amount selections
@@ -283,26 +315,44 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function updateGivingTotalDisplay() {
+    // Update Telugu display
     selectedTotalVal.textContent = `₹${selectedAmount}`;
     selectedFreqVal.textContent = selectedFrequency === 'monthly' ? 'ప్రతి నెల' : 'ఒక్కసారి';
+    
+    // Update English display
+    selectedTotalValEn.textContent = `₹${selectedAmount}`;
+    selectedFreqValEn.textContent = selectedFrequency === 'monthly' ? 'monthly' : 'once';
   }
 
   // Submit Donation
   btnSubmitGiving.addEventListener('click', () => {
+    const currentLang = document.documentElement.getAttribute('data-lang');
+    
     if (selectedAmount <= 0) {
-      alert('దయచేసి సరైన కానుక మొత్తాన్ని నమోదు చేయండి.');
+      if (currentLang === 'te') {
+        alert('దయచేసి సరైన కానుక మొత్తాన్ని నమోదు చేయండి.');
+      } else {
+        alert('Please select or input a valid donation amount.');
+      }
       return;
     }
 
     // Show simulated loading status
     const btnOriginalContent = btnSubmitGiving.innerHTML;
     btnSubmitGiving.disabled = true;
-    btnSubmitGiving.innerHTML = '<i data-lucide="loader" class="inline-icon animate-spin"></i> ప్రాసెస్ చేయబడుతోంది...';
+    
+    if (currentLang === 'te') {
+      btnSubmitGiving.innerHTML = '<i data-lucide="loader" class="inline-icon animate-spin"></i> ప్రాసెస్ చేయబడుతోంది...';
+    } else {
+      btnSubmitGiving.innerHTML = '<i data-lucide="loader" class="inline-icon animate-spin"></i> Processing...';
+    }
     lucide.createIcons();
 
     setTimeout(() => {
       // Show success overlay
       successAmountVal.textContent = `₹${selectedAmount}${selectedFrequency === 'monthly' ? '/నెల' : ''}`;
+      successAmountValEn.textContent = `₹${selectedAmount}${selectedFrequency === 'monthly' ? '/mo' : ''}`;
+      
       givingSuccessOverlay.classList.add('show');
       
       // Reset button state
@@ -341,16 +391,23 @@ document.addEventListener('DOMContentLoaded', () => {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Check validation (built-in validation will trigger first, but let's confirm)
+    // Check validation (built-in validation will trigger first)
     if (!contactForm.checkValidity()) {
       contactForm.reportValidity();
       return;
     }
 
+    const currentLang = document.documentElement.getAttribute('data-lang');
+
     // Show loading state
     const btnOriginalText = btnSubmitContact.innerHTML;
     btnSubmitContact.disabled = true;
-    btnSubmitContact.innerHTML = '<i data-lucide="loader" class="inline-icon animate-spin"></i> పంపబడుతోంది...';
+    
+    if (currentLang === 'te') {
+      btnSubmitContact.innerHTML = '<i data-lucide="loader" class="inline-icon animate-spin"></i> పంపబడుతోంది...';
+    } else {
+      btnSubmitContact.innerHTML = '<i data-lucide="loader" class="inline-icon animate-spin"></i> Sending...';
+    }
     lucide.createIcons();
 
     setTimeout(() => {
