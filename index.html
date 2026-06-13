@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grace Community Church | Welcome Home</title>
+  <meta name="description" content="Welcome to Grace Community Church. Join us for Sunday services, discover our ministries, listen to latest sermons, and grow in faith together.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Floating Header / Navbar -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#" class="logo" id="header-logo">
+        <span class="logo-icon"><i data-lucide="cross"></i></span>
+        <span class="logo-text">Grace</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#sermons" class="nav-link">Sermons</a>
+        <a href="#ministries" class="nav-link">Ministries</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#giving" class="nav-link">Giving</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Plan Your Visit</a>
+        <button id="mobile-nav-toggle" class="icon-btn mobile-menu-btn" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#sermons" class="mobile-nav-link">Sermons</a>
+    <a href="#ministries" class="mobile-nav-link">Ministries</a>
+    <a href="#events" class="mobile-nav-link">Events</a>
+    <a href="#giving" class="mobile-nav-link">Giving</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="#contact" class="btn btn-primary w-full text-center mt-4">Plan Your Visit</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg" style="background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), url('hero.png');"></div>
+      <div class="hero-content container text-center">
+        <span class="hero-subtitle animate-fade-in">Welcome to Grace Community Church</span>
+        <h1 class="hero-title animate-fade-in delay-1">A place to belong, grow, and serve.</h1>
+        <p class="hero-description animate-fade-in delay-2">We are a vibrant community centered on faith, love, and hope. Join us online or in person as we discover God's purpose for our lives.</p>
+        <div class="hero-buttons animate-fade-in delay-3">
+          <a href="#sermons" class="btn btn-primary btn-lg">Watch Latest Sermon</a>
+          <a href="#about" class="btn btn-secondary btn-lg">Learn More <i data-lucide="arrow-right" class="inline-icon"></i></a>
+        </div>
+      </div>
+      <a href="#quick-info" class="scroll-down-indicator" aria-label="Scroll down">
+        <i data-lucide="chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- Quick Info Strip -->
+    <section class="quick-info-section" id="quick-info">
+      <div class="container grid-3 info-grid">
+        <div class="info-card reveal">
+          <div class="info-icon"><i data-lucide="calendar-days"></i></div>
+          <div class="info-details">
+            <h3>Service Times</h3>
+            <p>Sundays at 9:00 AM & 11:00 AM</p>
+            <span>In-person & Online</span>
+          </div>
+        </div>
+        <div class="info-card reveal">
+          <div class="info-icon"><i data-lucide="map-pin"></i></div>
+          <div class="info-details">
+            <h3>Our Location</h3>
+            <p>123 Grace Way, Springfield</p>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="info-link">Get Directions <i data-lucide="external-link" class="inline-icon-xs"></i></a>
+          </div>
+        </div>
+        <div class="info-card reveal">
+          <div class="info-icon"><i data-lucide="tv"></i></div>
+          <div class="info-details">
+            <h3>Watch Live</h3>
+            <p>Join our online service</p>
+            <a href="#sermons" class="live-indicator"><span class="pulse-dot"></span> Live Stream</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section-padding" id="about">
+      <div class="container grid-2 align-center">
+        <div class="about-image reveal">
+          <div class="image-wrapper">
+            <img src="community.png" alt="Grace Community Gathering" class="img-responsive rounded-lg shadow-lg">
+            <div class="image-overlay-card">
+              <span class="overlay-number">15+</span>
+              <span class="overlay-text">Years serving our local community</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <h2 class="section-title">Centered in Faith. Connected in Love.</h2>
+          <p class="section-lead">At Grace Community Church, our doors are wide open to people from all backgrounds, regardless of where they are on their spiritual journey.</p>
+          <p>We are a multi-generational church focused on building deep relationships with God and each other. We believe that church isn't just a building—it's a family of believers working together to make our city a better place.</p>
+          <div class="values-grid">
+            <div class="value-item">
+              <i data-lucide="heart" class="value-icon"></i>
+              <div>
+                <h4>Radical Grace</h4>
+                <p>We love and welcome unconditionally, just as Christ loves us.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <i data-lucide="users" class="value-icon"></i>
+              <div>
+                <h4>True Fellowship</h4>
+                <p>Life is better together. We build authentic community in groups.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sermons Section -->
+    <section class="sermons-section section-padding bg-alt" id="sermons">
+      <div class="container text-center mb-5">
+        <h2 class="section-title">Latest Message</h2>
+        <p class="section-subtitle">Catch up on our current teaching series or listen online.</p>
+      </div>
+
+      <div class="container grid-2-sermons">
+        <!-- Main Sermon Card / Audio Player Simulator -->
+        <div class="sermon-player-card reveal">
+          <div class="sermon-artwork">
+            <img src="sermon.png" alt="Sermon Series Cover">
+            <span class="series-badge">Current Series</span>
+          </div>
+          <div class="player-content">
+            <span class="sermon-date">June 14, 2026</span>
+            <h3 class="sermon-title">Walking in Grace</h3>
+            <p class="sermon-speaker">Pastor Samuel Harris • Series: Faith & Grace (Part 3)</p>
+            
+            <!-- Audio Player UI -->
+            <div class="audio-player-ui">
+              <div class="progress-container">
+                <span id="current-time">0:00</span>
+                <div class="progress-bar-wrapper" id="progress-bar-wrapper">
+                  <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+                </div>
+                <span id="duration">12:34</span>
+              </div>
+              <div class="player-controls">
+                <button class="player-btn btn-sec" id="btn-prev" aria-label="Rewind 10 seconds"><i data-lucide="rewind"></i></button>
+                <button class="player-btn btn-main" id="btn-play-pause" aria-label="Play"><i data-lucide="play" id="play-icon"></i><i data-lucide="pause" id="pause-icon" style="display:none;"></i></button>
+                <button class="player-btn btn-sec" id="btn-next-fwd" aria-label="Fast Forward 10 seconds"><i data-lucide="fast-forward"></i></button>
+              </div>
+              <div class="volume-control">
+                <i data-lucide="volume-2"></i>
+                <input type="range" min="0" max="100" value="80" class="volume-slider" id="volume-slider" aria-label="Volume slider">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sermon Archive List -->
+        <div class="sermon-list reveal">
+          <h3 class="archive-header-title">Recent Messages</h3>
+          <div class="archive-list">
+            <div class="archive-item active-archive-item" data-sermon-id="walking-in-grace" data-title="Walking in Grace" data-speaker="Pastor Samuel Harris" data-duration="12:34">
+              <div class="archive-info">
+                <h4>Walking in Grace</h4>
+                <p>Pastor Samuel Harris • Jun 14, 2026</p>
+              </div>
+              <button class="archive-play-btn" aria-label="Play Walking in Grace"><i data-lucide="play-circle"></i></button>
+            </div>
+            
+            <div class="archive-item" data-sermon-id="strength-in-trials" data-title="Strength in the Midst of Trials" data-speaker="Pastor Samuel Harris" data-duration="24:18">
+              <div class="archive-info">
+                <h4>Strength in the Midst of Trials</h4>
+                <p>Pastor Samuel Harris • Jun 07, 2026</p>
+              </div>
+              <button class="archive-play-btn" aria-label="Play Strength in the Midst of Trials"><i data-lucide="play-circle"></i></button>
+            </div>
+
+            <div class="archive-item" data-sermon-id="finding-peace" data-title="Finding Peace in Chaos" data-speaker="Pastor Jane Doe" data-duration="18:45">
+              <div class="archive-info">
+                <h4>Finding Peace in Chaos</h4>
+                <p>Pastor Jane Doe • May 31, 2026</p>
+              </div>
+              <button class="archive-play-btn" aria-label="Play Finding Peace in Chaos"><i data-lucide="play-circle"></i></button>
+            </div>
+
+            <div class="archive-item" data-sermon-id="power-of-prayer" data-title="The Power of Persistent Prayer" data-speaker="Pastor Jane Doe" data-duration="21:10">
+              <div class="archive-info">
+                <h4>The Power of Persistent Prayer</h4>
+                <p>Pastor Jane Doe • May 24, 2026</p>
+              </div>
+              <button class="archive-play-btn" aria-label="Play The Power of Persistent Prayer"><i data-lucide="play-circle"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ministries Section -->
+    <section class="ministries-section section-padding" id="ministries">
+      <div class="container text-center mb-5">
+        <h2 class="section-title">Our Ministries</h2>
+        <p class="section-subtitle">Get involved. We have groups and spaces designed for all ages and walks of life.</p>
+      </div>
+
+      <div class="container tab-container reveal">
+        <div class="tab-headers">
+          <button class="tab-btn active" data-tab="kids">Grace Kids</button>
+          <button class="tab-btn" data-tab="youth">Grace Youth</button>
+          <button class="tab-btn" data-tab="young-adults">Young Adults</button>
+          <button class="tab-btn" data-tab="outreach">Outreach</button>
+        </div>
+
+        <div class="tab-contents">
+          <!-- Grace Kids -->
+          <div class="tab-panel active" id="tab-kids">
+            <div class="grid-2 align-center">
+              <div class="panel-text">
+                <h3>Grace Kids (Ages 0-11)</h3>
+                <p class="panel-lead">Creating a safe, fun, and engaging environment where kids can learn about Jesus on their level.</p>
+                <p>Our background-checked leaders provide interactive lessons, energetic worship, and age-appropriate games every Sunday morning during services. We partner with parents to help kids grow their faith in a loving environment.</p>
+                <a href="#contact" class="btn btn-secondary mt-3">Register Your Child</a>
+              </div>
+              <div class="panel-image">
+                <div class="ministry-icon-decor"><i data-lucide="baby"></i></div>
+                <div class="panel-visual" style="background-color: var(--primary-light-alpha); color: var(--primary);">
+                  <h4>Sundays at 9:00 & 11:00 AM</h4>
+                  <p>Check-in opens 15 minutes before service starts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grace Youth -->
+          <div class="tab-panel" id="tab-youth">
+            <div class="grid-2 align-center">
+              <div class="panel-text">
+                <h3>Grace Youth (Grades 6-12)</h3>
+                <p class="panel-lead">Empowering teenagers to discover their identity in Christ and build lifelong, faith-filled friendships.</p>
+                <p>We meet weekly for games, high-energy worship, and deep small group discussions about real-life issues. It's a place where every teenager is welcome, accepted, and encouraged to lead.</p>
+                <a href="#contact" class="btn btn-secondary mt-3">Join Youth Groups</a>
+              </div>
+              <div class="panel-image">
+                <div class="ministry-icon-decor"><i data-lucide="sparkles"></i></div>
+                <div class="panel-visual" style="background-color: var(--secondary-light-alpha); color: var(--secondary);">
+                  <h4>Wednesdays at 7:00 PM</h4>
+                  <p>In the Youth Auditorium. Includes cafe and hangouts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Young Adults -->
+          <div class="tab-panel" id="tab-young-adults">
+            <div class="grid-2 align-center">
+              <div class="panel-text">
+                <h3>Young Adults (Ages 18-30)</h3>
+                <p class="panel-lead">Navigating college, careers, and life decisions in a community committed to following Christ.</p>
+                <p>Our YA Ministry hosts monthly gatherings, small groups throughout the city, and social events. We are passionate about searching for truth, serving together, and having deep discussions about faith in the modern world.</p>
+                <a href="#contact" class="btn btn-secondary mt-3">Get Connected</a>
+              </div>
+              <div class="panel-image">
+                <div class="ministry-icon-decor"><i data-lucide="compass"></i></div>
+                <div class="panel-visual" style="background-color: var(--accent-light-alpha); color: var(--accent);">
+                  <h4>Every Tuesday at 7:30 PM</h4>
+                  <p>At local coffee shops and home groups. Join anytime.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outreach -->
+          <div class="tab-panel" id="tab-outreach">
+            <div class="grid-2 align-center">
+              <div class="panel-text">
+                <h3>Outreach & Missions</h3>
+                <p class="panel-lead">Serving our local community and sharing the hope of Christ globally.</p>
+                <p>We partner with local shelters, food pantries, and global mission organizations to support people in need. From weekly food distributions to seasonal service projects, there is a place for you to make a tangible difference.</p>
+                <a href="#contact" class="btn btn-secondary mt-3">Volunteer Now</a>
+              </div>
+              <div class="panel-image">
+                <div class="ministry-icon-decor"><i data-lucide="globe"></i></div>
+                <div class="panel-visual" style="background-color: var(--success-light-alpha); color: var(--success-color);">
+                  <h4>Saturday Projects</h4>
+                  <p>Join our monthly city-wide service projects. All ages welcome.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section section-padding bg-alt" id="events">
+      <div class="container text-center mb-5">
+        <h2 class="section-title">Upcoming Events</h2>
+        <p class="section-subtitle">Mark your calendars! There is always something happening at Grace.</p>
+      </div>
+
+      <div class="container grid-3 events-grid">
+        <!-- Event Card 1 -->
+        <div class="event-card reveal">
+          <div class="event-date">
+            <span class="day">15</span>
+            <span class="month">Jul</span>
+          </div>
+          <div class="event-details">
+            <span class="event-tag tag-youth">Youth</span>
+            <h3>Summer Youth Camp</h3>
+            <p class="event-time"><i data-lucide="clock" class="inline-icon-xs"></i> 9:00 AM - 5:00 PM</p>
+            <p class="event-desc">A five-day summer experience filled with adventure, team games, powerful message sessions, and new friends.</p>
+            <a href="#contact" class="event-action-link">Register Online <i data-lucide="arrow-up-right" class="inline-icon-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="event-card reveal">
+          <div class="event-date">
+            <span class="day">22</span>
+            <span class="month">Jul</span>
+          </div>
+          <div class="event-details">
+            <span class="event-tag tag-community">Outreach</span>
+            <h3>Community Food Drive</h3>
+            <p class="event-time"><i data-lucide="clock" class="inline-icon-xs"></i> 10:00 AM - 2:00 PM</p>
+            <p class="event-desc">Help us pack and distribute food boxes to families in need in the local area. Volunteers are welcome to sign up.</p>
+            <a href="#contact" class="event-action-link">Sign Up to Help <i data-lucide="arrow-up-right" class="inline-icon-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="event-card reveal">
+          <div class="event-date">
+            <span class="day">05</span>
+            <span class="month">Aug</span>
+          </div>
+          <div class="event-details">
+            <span class="event-tag tag-worship">Worship</span>
+            <h3>Worship & Prayer Night</h3>
+            <p class="event-time"><i data-lucide="clock" class="inline-icon-xs"></i> 7:00 PM - 8:30 PM</p>
+            <p class="event-desc">An evening dedicated to praise, reflection, and community prayer in our main sanctuary. Childcare provided.</p>
+            <a href="#contact" class="event-action-link">More Information <i data-lucide="arrow-up-right" class="inline-icon-xs"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giving Section -->
+    <section class="giving-section section-padding" id="giving">
+      <div class="container grid-2 align-center">
+        <div class="giving-text reveal">
+          <h2 class="section-title">Support the Mission</h2>
+          <p class="section-lead">Your generosity enables us to make a difference in our community and share hope around the world.</p>
+          <p>We believe giving is an act of worship and trust in God's provision. Every gift, big or small, helps fuel the ministries, programs, and outreach efforts of Grace Community Church. Thank you for your faithful support!</p>
+          <div class="giving-methods">
+            <div class="method-item">
+              <i data-lucide="credit-card"></i>
+              <span>Secure Online Card Payment</span>
+            </div>
+            <div class="method-item">
+              <i data-lucide="phone-call"></i>
+              <span>Text to Give: (555) 123-4567</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Giving Widget -->
+        <div class="giving-widget-card reveal">
+          <div class="widget-header">
+            <h3>Online Giving</h3>
+            <p>Secure, fast, and convenient</p>
+          </div>
+          <div class="widget-body">
+            <!-- Frequency toggle -->
+            <div class="giving-frequency-toggle">
+              <button class="freq-btn active" id="freq-one-time">One-time</button>
+              <button class="freq-btn" id="freq-monthly">Monthly</button>
+            </div>
+
+            <!-- Amount quick selector -->
+            <div class="amount-selector">
+              <button class="amount-btn" data-val="10">$10</button>
+              <button class="amount-btn active" data-val="25">$25</button>
+              <button class="amount-btn" data-val="50">$50</button>
+              <button class="amount-btn" data-val="100">$100</button>
+              <button class="amount-btn" data-val="250">$250</button>
+              <button class="amount-btn" id="btn-custom" data-val="custom">Custom</button>
+            </div>
+
+            <!-- Custom amount input -->
+            <div class="custom-amount-container" id="custom-amount-container" style="display: none;">
+              <div class="amount-input-wrapper">
+                <span class="currency-symbol">$</span>
+                <input type="number" id="custom-amount-input" placeholder="Enter custom amount" min="1">
+              </div>
+            </div>
+
+            <div class="selected-amount-display">
+              Giving Total: <strong id="selected-total-val">$25</strong> <span id="selected-freq-val">once</span>
+            </div>
+
+            <button class="btn btn-primary w-full text-center mt-3 py-3" id="btn-submit-giving">
+              <i data-lucide="shield-check" class="inline-icon"></i> Process Gift
+            </button>
+            <p class="widget-secure-note"><i data-lucide="lock" class="inline-icon-xs"></i> SSL Encrypted & Secured</p>
+          </div>
+
+          <!-- Giving Success Overlay (hidden by default) -->
+          <div class="giving-success-overlay" id="giving-success-overlay">
+            <div class="success-content">
+              <div class="success-icon-wrapper">
+                <i data-lucide="check-circle-2"></i>
+              </div>
+              <h3>Thank You!</h3>
+              <p>Your gift of <strong id="success-amount-val">$25</strong> has been processed successfully.</p>
+              <p class="text-muted">A receipt has been sent to your email.</p>
+              <button class="btn btn-secondary btn-sm mt-4" id="btn-reset-giving">Give Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form & Location Section -->
+    <section class="contact-section section-padding bg-alt" id="contact">
+      <div class="container grid-2">
+        <div class="contact-info-block reveal">
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-lead">Have questions, need prayer, or want to say hello? Fill out the form, or reach out directly.</p>
+          
+          <div class="contact-details-list">
+            <div class="contact-detail-item">
+              <div class="cd-icon"><i data-lucide="mail"></i></div>
+              <div class="cd-text">
+                <h4>Email Address</h4>
+                <p>hello@gracecommunity.church</p>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="cd-icon"><i data-lucide="phone"></i></div>
+              <div class="cd-text">
+                <h4>Phone Number</h4>
+                <p>(555) 987-6543</p>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="cd-icon"><i data-lucide="clock"></i></div>
+              <div class="cd-text">
+                <h4>Office Hours</h4>
+                <p>Mon - Thu: 9:00 AM - 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="contact-form-card reveal">
+          <form id="church-contact-form">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">How can we help?</label>
+              <select id="contact-subject" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="visit">Planning a visit</option>
+                <option value="prayer">Prayer Request</option>
+                <option value="groups">Joining a Small Group</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="other">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" rows="5" placeholder="Tell us how we can connect with you..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full text-center" id="btn-submit-contact">
+              Send Message <i data-lucide="send" class="inline-icon"></i>
+            </button>
+          </form>
+
+          <!-- Contact Success State -->
+          <div class="contact-success-state" id="contact-success-state">
+            <div class="success-content">
+              <div class="success-icon-circle">
+                <i data-lucide="mail-check"></i>
+              </div>
+              <h3>Message Sent!</h3>
+              <p>Thank you for reaching out. A team member from Grace will get back to you shortly.</p>
+              <button class="btn btn-secondary btn-sm mt-3" id="btn-reset-contact">Send Another Message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon"><i data-lucide="cross"></i></span>
+            <span class="logo-text">Grace</span>
+          </a>
+          <p class="footer-desc mt-3">A welcoming Christian church located in Springfield, dedicated to loving God and loving people.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Grace</a></li>
+            <li><a href="#sermons">Sermons</a></li>
+            <li><a href="#ministries">Ministries</a></li>
+            <li><a href="#events">Upcoming Events</a></li>
+            <li><a href="#giving">Giving</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#contact">Plan Your Visit</a></li>
+            <li><a href="#contact">Prayer Request</a></li>
+            <li><a href="#contact">Join a Group</a></li>
+            <li><a href="#contact">Serve With Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Service Times</h4>
+          <p class="footer-text-light">Sundays at 9:00 AM & 11:00 AM</p>
+          <p class="footer-text-muted mt-2">123 Grace Way,<br>Springfield</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Grace Community Church. All rights reserved. Designed with Grace.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
