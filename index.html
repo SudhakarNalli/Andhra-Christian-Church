@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title class="lang-te">ఆంధ్ర క్రిస్టియన్ చర్చ్ | ముంబై</title>
   <title class="lang-en" style="display: none;">Andhra Christian Church | Mumbai</title>
-  <meta name="description" content="ఆంధ్ర క్రిస్టియన్ చర్చ్, అంధేరి ఈస్ట్, ముంబైకి స్వాగతం. ఆదివారం ఆరాధన కూడికలలో మాతో చేరండి, దేవుని వాక్యంలో ఎదగండి.">
+  <meta name="description" content="ఆంధ్ర క్రిస్టియన్ చర్చ్, అంధేరి ఈస్ట్, ముంబై. ఆరాధన సమయాలు, చిరునామా మరియు సంప్రదింపు వివరాలు.">
   
   <!-- Google Fonts - Telugu and Sans support -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,1041 +15,140 @@
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <!-- Stylesheets -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="minimalist-layout">
   
-  <!-- Floating Header / Navbar -->
-  <header class="main-header">
-    <div class="header-container">
-      <a href="#" class="logo" id="header-logo">
-        <span class="logo-icon"><i data-lucide="cross"></i></span>
-        <span class="logo-text">
-          <span class="lang-te">ఆంధ్ర క్రిస్టియన్ చర్చ్</span>
-          <span class="lang-en">Andhra Christian Church</span>
-        </span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">
-          <span class="lang-te">మన గురించి</span>
-          <span class="lang-en">About</span>
-        </a>
-        <a href="#sermons" class="nav-link">
-          <span class="lang-te">ప్రసంగాలు</span>
-          <span class="lang-en">Sermons</span>
-        </a>
-        <a href="#ministries" class="nav-link">
-          <span class="lang-te">పరిచర్యలు</span>
-          <span class="lang-en">Ministries</span>
-        </a>
-        <a href="#events" class="nav-link">
-          <span class="lang-te">కార్యక్రమాలు</span>
-          <span class="lang-en">Events</span>
-        </a>
-        <a href="#giving" class="nav-link">
-          <span class="lang-te">కానుకలు</span>
-          <span class="lang-en">Giving</span>
-        </a>
-        <a href="#contact" class="nav-link">
-          <span class="lang-te">సంప్రదించండి</span>
-          <span class="lang-en">Contact</span>
-        </a>
-      </nav>
-      <div class="header-actions">
-        <!-- Language Toggle Switch -->
-        <button id="lang-toggle" class="btn btn-secondary btn-sm lang-btn" aria-label="Switch language">
-          <i data-lucide="languages" class="inline-icon-xs mr-1"></i>
-          <span class="lang-te">English</span>
-          <span class="lang-en">తెలుగు</span>
-        </button>
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">
-          <i data-lucide="moon" class="theme-icon-dark"></i>
-          <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
-        </button>
-        <!-- Plan Visit CTA -->
-        <a href="#contact" class="btn btn-primary btn-sm hidden-mobile">
-          <span class="lang-te">మాతో కలవండి</span>
-          <span class="lang-en">Plan Your Visit</span>
-        </a>
-        <button id="mobile-nav-toggle" class="icon-btn mobile-menu-btn" aria-label="Toggle menu">
-          <i data-lucide="menu"></i>
-        </button>
-      </div>
+  <!-- Full Screen Background with hero.png -->
+  <div class="minimalist-bg" style="background-image: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.75)), url('hero.png');"></div>
+
+  <!-- Minimalist Floating Header for switches -->
+  <header class="minimalist-header">
+    <div class="header-switches">
+      <!-- Language Switch -->
+      <button id="lang-toggle" class="btn btn-secondary btn-sm lang-btn" aria-label="Switch language">
+        <i data-lucide="languages" class="inline-icon-xs mr-1"></i>
+        <span class="lang-te">English</span>
+        <span class="lang-en">తెలుగు</span>
+      </button>
+      <!-- Theme Switch -->
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">
+        <i data-lucide="moon" class="theme-icon-dark"></i>
+        <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
+      </button>
     </div>
   </header>
 
-  <!-- Mobile Dropdown Navigation -->
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="#about" class="mobile-nav-link">
-      <span class="lang-te">మన గురించి</span>
-      <span class="lang-en">About</span>
-    </a>
-    <a href="#sermons" class="mobile-nav-link">
-      <span class="lang-te">ప్రసంగాలు</span>
-      <span class="lang-en">Sermons</span>
-    </a>
-    <a href="#ministries" class="mobile-nav-link">
-      <span class="lang-te">పరిచర్యలు</span>
-      <span class="lang-en">Ministries</span>
-    </a>
-    <a href="#events" class="mobile-nav-link">
-      <span class="lang-te">కార్యక్రమాలు</span>
-      <span class="lang-en">Events</span>
-    </a>
-    <a href="#giving" class="mobile-nav-link">
-      <span class="lang-te">కానుకలు</span>
-      <span class="lang-en">Giving</span>
-    </a>
-    <a href="#contact" class="mobile-nav-link">
-      <span class="lang-te">సంప్రదించండి</span>
-      <span class="lang-en">Contact</span>
-    </a>
-    <a href="#contact" class="btn btn-primary w-full text-center mt-4">
-      <span class="lang-te">మాతో కలవండి</span>
-      <span class="lang-en">Plan Your Visit</span>
-    </a>
-  </div>
-
-  <main>
-    <!-- Hero Section with Glassmorphic Floating Card -->
-    <section class="hero-section" id="hero">
-      <div class="hero-bg" style="background-image: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.6)), url('hero.png');"></div>
-      <div class="container hero-container-flex">
-        <div class="hero-glass-card animate-fade-in">
-          <span class="hero-subtitle">
-            <span class="lang-te">ఆంధ్ర క్రిస్టియన్ చర్చ్‌కి స్వాగతం</span>
-            <span class="lang-en">Welcome to Andhra Christian Church</span>
-          </span>
-          <h1 class="hero-title">
-            <span class="lang-te">విశ్వాసం, నిరీక్షణ మరియు క్రీస్తు ప్రేమలో ఎదగండి</span>
-            <span class="lang-en">Grow in Faith, Hope, and Christ's Love</span>
-          </h1>
-          <p class="hero-description">
-            <span class="lang-te">మేము ముంబై నగరంలో ఉన్న తెలుగు మాట్లాడే క్రైస్తవ సంఘం. దేవుని వాక్యాన్ని నేర్చుకోవడానికి, సేవ చేయడానికి మరియు ఒకరికొకరు తోడుగా ఉండటానికి మాతో చేరండి.</span>
-            <span class="lang-en">We are a Bible-believing Telugu Christian community in Mumbai. Join us as we learn God's Word, serve our city, and grow in fellowship together.</span>
-          </p>
-          <div class="hero-buttons">
-            <a href="#sermons" class="btn btn-primary btn-lg">
-              <span class="lang-te">తాజా ప్రసంగం చూడండి</span>
-              <span class="lang-en">Watch Latest Sermon</span>
-            </a>
-            <a href="#about" class="btn btn-secondary btn-lg">
-              <span class="lang-te">మరింత తెలుసుకోండి <i data-lucide="arrow-right" class="inline-icon"></i></span>
-              <span class="lang-en">Learn More <i data-lucide="arrow-right" class="inline-icon"></i></span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <a href="#quick-info" class="scroll-down-indicator" aria-label="Scroll down">
-        <i data-lucide="chevron-down"></i>
-      </a>
-    </section>
-
-    <!-- Quick Info Strip -->
-    <section class="quick-info-section" id="quick-info">
-      <div class="container grid-3 info-grid">
-        <!-- Times Info -->
-        <div class="info-card reveal">
-          <div class="info-icon"><i data-lucide="calendar-days"></i></div>
-          <div class="info-details">
-            <h3>
-              <span class="lang-te">ఆరాధన సమయాలు</span>
-              <span class="lang-en">Service Times</span>
-            </h3>
-            <p>
-              <span class="lang-te">ప్రతి ఆదివారం ఉదయం 9:00 & 11:00 గంటలకు</span>
-              <span class="lang-en">Sundays at 9:00 AM & 11:00 AM</span>
-            </p>
-            <span>
-              <span class="lang-te">వ్యక్తిగతంగా & ఆన్‌లైన్ ద్వారా</span>
-              <span class="lang-en">In-person & Online Live Stream</span>
-            </span>
-          </div>
-        </div>
-        <!-- Address Info -->
-        <div class="info-card reveal">
-          <div class="info-icon"><i data-lucide="map-pin"></i></div>
-          <div class="info-details">
-            <h3>
-              <span class="lang-te">మా చిరునామా</span>
-              <span class="lang-en">Our Location</span>
-            </h3>
-            <p>
-              <span class="lang-te">పంప్ హౌస్, 93, జీజామాతా రోడ్, అంధేరి ఈస్ట్, ముంబై</span>
-              <span class="lang-en">Pump House, 93, Jijamata Rd, Andheri East, Mumbai</span>
-            </p>
-            <a href="https://www.google.com/maps/place/Andhra+Christian+Church+(%E0%B0%A4%E0%B1%86%E0%B0%B2%E0%B1%81%E0%B0%97%E0%B1%81)/@19.1262802,72.8568212,17z" target="_blank" rel="noopener noreferrer" class="info-link">
-              <span class="lang-te">మ్యాప్ ద్వారా దారి చూడండి <i data-lucide="external-link" class="inline-icon-xs"></i></span>
-              <span class="lang-en">Get Directions <i data-lucide="external-link" class="inline-icon-xs"></i></span>
-            </a>
-          </div>
-        </div>
-        <!-- Watch Live Info -->
-        <div class="info-card reveal">
-          <div class="info-icon"><i data-lucide="tv"></i></div>
-          <div class="info-details">
-            <h3>
-              <span class="lang-te">ప్రత్యక్ష ప్రసారం</span>
-              <span class="lang-en">Watch Live</span>
-            </h3>
-            <p>
-              <span class="lang-te">మా ఆన్‌లైన్ ఆరాధనలో పాలుపంచుకోండి</span>
-              <span class="lang-en">Join our online Telugu service</span>
-            </p>
-            <a href="#sermons" class="live-indicator">
-              <span class="pulse-dot"></span>
-              <span class="lang-te">లైవ్ స్ట్రీమ్</span>
-              <span class="lang-en">Live Stream</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section with Two Columns -->
-    <section class="about-section section-padding" id="about">
-      <div class="container grid-2 align-center">
-        <div class="about-image reveal">
-          <div class="image-wrapper">
-            <img src="community.png" alt="Grace Community Gathering" class="img-responsive rounded-lg shadow-lg">
-            <div class="image-overlay-card">
-              <span class="overlay-number">15+</span>
-              <span class="overlay-text">
-                <span class="lang-te">సంవత్సరాలుగా ముంబైలో తెలుగు సేవలు</span>
-                <span class="lang-en">Years of Telugu Ministry in Mumbai</span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="about-text reveal">
-          <h2 class="section-title">
-            <span class="lang-te">విశ్వాసంతో కేంద్రీకృతమై.. ప్రేమతో అనుసంధానించబడి..</span>
-            <span class="lang-en">Centered in Faith. Connected in Love.</span>
-          </h2>
-          <p class="section-lead">
-            <span class="lang-te">ఆంధ్ర క్రిస్టియన్ చర్చ్‌లో, మీ ఆధ్యాత్మిక ప్రయాణంలో మీరు ఎక్కడ ఉన్నా సరే, ప్రతి ఒక్కరికీ మా తలుపులు ఎల్లప్పుడూ తెరిచే ఉంటాయి.</span>
-            <span class="lang-en">At Andhra Christian Church, our doors are open to everyone from all walks of life, no matter where you are in your spiritual journey.</span>
-          </p>
-          <p>
-            <span class="lang-te">మేము ముంబైలోని తెలుగు క్రైస్తవ విశ్వాసుల కోసం ప్రత్యేకమైన ఆరాధనలను అందిస్తున్నాము. దేవుని వాక్యం ద్వారా ఒకరినొకరు బలపరుచుకుంటూ, ముంబై మహానగరంలో క్రీస్తు ప్రేమకు సాక్ష్యాలుగా నిలబడటమే మా ధ్యేయం. చర్చి అంటే కేవలం ఒక భవనం కాదు—మన నగరాన్ని మెరుగైన ప్రదేశంగా మార్చడానికి కలిసి పనిచేసే విశ్వాసుల కుటుంబం అని మేము నమ్ముతున్నాము.</span>
-            <span class="lang-en">We provide Telugu services and support for the Christian community in Mumbai. We build authentic relationships, learn the Scriptures together, and seek to make a difference in our community as a family of believers.</span>
-          </p>
-          <div class="values-grid">
-            <div class="value-item">
-              <i data-lucide="heart" class="value-icon"></i>
-              <div>
-                <h4>
-                  <span class="lang-te">అపారమైన కృప</span>
-                  <span class="lang-en">Unconditional Grace</span>
-                </h4>
-                <p>
-                  <span class="lang-te">క్రీస్తు మనలను ప్రేమించినట్లే మేము కూడా ప్రతి ఒక్కరినీ బేషరతుగా ప్రేమిస్తాము మరియు ఆహ్వానిస్తాము.</span>
-                  <span class="lang-en">We love and welcome everyone unconditionally, reflecting the grace Christ has shown us.</span>
-                </p>
-              </div>
-            </div>
-            <div class="value-item">
-              <i data-lucide="users" class="value-icon"></i>
-              <div>
-                <h4>
-                  <span class="lang-te">నిజమైన సహవాసం</span>
-                  <span class="lang-en">True Fellowship</span>
-                </h4>
-                <p>
-                  <span class="lang-te">కలసి జీవించడం ఎంతో ధన్యం. విశ్వాసులంతా ఒకే కుటుంబంగా సహవాసంలో పాలుపంచుకుంటాము.</span>
-                  <span class="lang-en">Life is meant to be shared. We grow together through small groups and prayer meetings.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sermons Section with Spotify-Style Audio Player -->
-    <section class="sermons-section section-padding bg-alt" id="sermons">
-      <div class="container text-center mb-5">
-        <h2 class="section-title">
-          <span class="lang-te">తాజా సందేశాలు</span>
-          <span class="lang-en">Latest Messages</span>
-        </h2>
-        <p class="section-subtitle">
-          <span class="lang-te">దేవుని వాక్య బోధనలను వినండి మరియు మీ ఆధ్యాత్మిక జీవితంలో ఎదగండి.</span>
-          <span class="lang-en">Listen to the Word of God and strengthen your walk of faith.</span>
+  <!-- Central Glassmorphic Info Card -->
+  <main class="minimalist-main">
+    <div class="info-card-container reveal">
+      <!-- Church Brand -->
+      <div class="church-brand">
+        <div class="church-cross-logo"><i data-lucide="cross"></i></div>
+        <h1 class="church-name">
+          <span class="lang-te">ఆంధ్ర క్రిస్టియన్ చర్చ్</span>
+          <span class="lang-en">Andhra Christian Church</span>
+        </h1>
+        <p class="church-tagline">
+          <span class="lang-te">ముంబై తెలుగు క్రైస్తవ ఆరాధన సంఘం</span>
+          <span class="lang-en">Telugu Christian Fellowship, Mumbai</span>
         </p>
       </div>
 
-      <div class="container grid-2-sermons">
-        <!-- Main Sermon Card / Spotify-Style Audio Player Simulator -->
-        <div class="sermon-player-card reveal">
-          <div class="sermon-artwork">
-            <img src="sermon.png" alt="Sermon Series Cover">
-            <span class="series-badge">
-              <span class="lang-te">ప్రస్తుత సిరీస్</span>
-              <span class="lang-en">Current Series</span>
-            </span>
-          </div>
-          <div class="player-content">
-            <span class="sermon-date">
-              <span class="lang-te">జూన్ 14, 2026</span>
-              <span class="lang-en">June 14, 2026</span>
-            </span>
-            <h3 class="sermon-title">
-              <span class="lang-te">కృపతో నడవడం</span>
-              <span class="lang-en">Walking in Grace</span>
-            </h3>
-            <p class="sermon-speaker">
-              <span class="lang-te">పాస్టర్ శామ్యూల్ హారిస్ • సిరీస్: విశ్వాసం & కృప (భాగం 3)</span>
-              <span class="lang-en">Pastor Samuel Harris • Series: Faith & Grace (Part 3)</span>
-            </p>
-            
-            <!-- Audio Player UI -->
-            <div class="audio-player-ui">
-              <div class="progress-container">
-                <span id="current-time">0:00</span>
-                <div class="progress-bar-wrapper" id="progress-bar-wrapper">
-                  <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
-                </div>
-                <span id="duration">12:34</span>
-              </div>
-              <div class="player-controls">
-                <button class="player-btn btn-sec" id="btn-prev" aria-label="Rewind">
-                  <i data-lucide="rewind"></i>
-                </button>
-                <button class="player-btn btn-main" id="btn-play-pause" aria-label="Play/Pause">
-                  <i data-lucide="play" id="play-icon"></i>
-                  <i data-lucide="pause" id="pause-icon" style="display:none;"></i>
-                </button>
-                <button class="player-btn btn-sec" id="btn-next-fwd" aria-label="Fast Forward">
-                  <i data-lucide="fast-forward"></i>
-                </button>
-              </div>
-              <div class="volume-control">
-                <i data-lucide="volume-2"></i>
-                <input type="range" min="0" max="100" value="80" class="volume-slider" id="volume-slider" aria-label="Volume slider">
-              </div>
-            </div>
-          </div>
-        </div>
+      <hr class="card-divider">
 
-        <!-- Sermon Archive List -->
-        <div class="sermon-list reveal">
-          <h3 class="archive-header-title">
-            <span class="lang-te">ఇటీవలి ప్రసంగాలు</span>
-            <span class="lang-en">Recent Sermons</span>
-          </h3>
-          <div class="archive-list">
-            <!-- Item 1 -->
-            <div class="archive-item active-archive-item" 
-                 data-sermon-id="walking-in-grace" 
-                 data-title-te="కృపతో నడవడం" 
-                 data-title-en="Walking in Grace"
-                 data-speaker-te="పాస్టర్ శామ్యూల్ హారిస్" 
-                 data-speaker-en="Pastor Samuel Harris"
-                 data-duration="12:34">
-              <div class="archive-info">
-                <h4>
-                  <span class="lang-te">కృపతో నడవడం</span>
-                  <span class="lang-en">Walking in Grace</span>
-                </h4>
-                <p>
-                  <span class="lang-te">పాస్టర్ శామ్యూల్ హారిస్ • జూన్ 14, 2026</span>
-                  <span class="lang-en">Pastor Samuel Harris • Jun 14, 2026</span>
-                </p>
-              </div>
-              <button class="archive-play-btn" aria-label="Play"><i data-lucide="play-circle"></i></button>
-            </div>
-            
-            <!-- Item 2 -->
-            <div class="archive-item" 
-                 data-sermon-id="strength-in-trials" 
-                 data-title-te="శ్రమలలో దేవుని బలం" 
-                 data-title-en="Strength in the Midst of Trials"
-                 data-speaker-te="పాస్టర్ శామ్యూల్ హారిస్" 
-                 data-speaker-en="Pastor Samuel Harris"
-                 data-duration="24:18">
-              <div class="archive-info">
-                <h4>
-                  <span class="lang-te">శ్రమలలో దేవుని బలం</span>
-                  <span class="lang-en">Strength in the Midst of Trials</span>
-                </h4>
-                <p>
-                  <span class="lang-te">పాస్టర్ శామ్యూల్ హారిస్ • జూన్ 07, 2026</span>
-                  <span class="lang-en">Pastor Samuel Harris • Jun 07, 2026</span>
-                </p>
-              </div>
-              <button class="archive-play-btn" aria-label="Play"><i data-lucide="play-circle"></i></button>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="archive-item" 
-                 data-sermon-id="finding-peace" 
-                 data-title-te="గందరగోళంలో దేవుని శాంతి" 
-                 data-title-en="Finding Peace in Chaos"
-                 data-speaker-te="పాస్టర్ జేన్ డో" 
-                 data-speaker-en="Pastor Jane Doe"
-                 data-duration="18:45">
-              <div class="archive-info">
-                <h4>
-                  <span class="lang-te">గందరగోళంలో దేవుని శాంతి</span>
-                  <span class="lang-en">Finding Peace in Chaos</span>
-                </h4>
-                <p>
-                  <span class="lang-te">పాస్టర్ జేన్ డో • మే 31, 2026</span>
-                  <span class="lang-en">Pastor Jane Doe • May 31, 2026</span>
-                </p>
-              </div>
-              <button class="archive-play-btn" aria-label="Play"><i data-lucide="play-circle"></i></button>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="archive-item" 
-                 data-sermon-id="power-of-prayer" 
-                 data-title-te="నిరంతర ప్రార్థన శక్తి" 
-                 data-title-en="The Power of Persistent Prayer"
-                 data-speaker-te="పాస్టర్ జేన్ డో" 
-                 data-speaker-en="Pastor Jane Doe"
-                 data-duration="21:10">
-              <div class="archive-info">
-                <h4>
-                  <span class="lang-te">నిరంతర ప్రార్థన శక్తి</span>
-                  <span class="lang-en">The Power of Persistent Prayer</span>
-                </h4>
-                <p>
-                  <span class="lang-te">పాస్టర్ జేన్ డో • మే 24, 2026</span>
-                  <span class="lang-en">Pastor Jane Doe • May 24, 2026</span>
-                </p>
-              </div>
-              <button class="archive-play-btn" aria-label="Play"><i data-lucide="play-circle"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ministries Section with Tabbed Grid -->
-    <section class="ministries-section section-padding" id="ministries">
-      <div class="container text-center mb-5">
-        <h2 class="section-title">
-          <span class="lang-te">మా పరిచర్యలు</span>
-          <span class="lang-en">Our Ministries</span>
+      <!-- Timings Section -->
+      <div class="card-section">
+        <h2 class="section-title-sm">
+          <i data-lucide="calendar-days" class="section-icon"></i>
+          <span class="lang-te">ఆరాధన సమయాలు</span>
+          <span class="lang-en">Service Timings</span>
         </h2>
-        <p class="section-subtitle">
-          <span class="lang-te">మా చర్చిలో వివిధ వయస్సుల వారి కోసం ప్రత్యేకమైన పరిచర్యలు ఉన్నాయి. మాతో చేరండి.</span>
-          <span class="lang-en">Get involved. We have groups and spaces designed for all ages and walks of life.</span>
-        </p>
-      </div>
-
-      <div class="container tab-container reveal">
-        <div class="tab-headers">
-          <button class="tab-btn active" data-tab="kids">
-            <span class="lang-te">గ్రేస్ కిడ్స్</span>
-            <span class="lang-en">Grace Kids</span>
-          </button>
-          <button class="tab-btn" data-tab="youth">
-            <span class="lang-te">గ్రేస్ యూత్</span>
-            <span class="lang-en">Grace Youth</span>
-          </button>
-          <button class="tab-btn" data-tab="young-adults">
-            <span class="lang-te">యంగ్ అడల్ట్స్</span>
-            <span class="lang-en">Young Adults</span>
-          </button>
-          <button class="tab-btn" data-tab="outreach">
-            <span class="lang-te">సేవా పరిచర్య</span>
-            <span class="lang-en">Outreach</span>
-          </button>
-        </div>
-
-        <div class="tab-contents">
-          <!-- Grace Kids -->
-          <div class="tab-panel active" id="tab-kids">
-            <div class="grid-2 align-center">
-              <div class="panel-text">
-                <h3>
-                  <span class="lang-te">గ్రేస్ కిడ్స్ (వయస్సు 0-11)</span>
-                  <span class="lang-en">Grace Kids (Ages 0-11)</span>
-                </h3>
-                <p class="panel-lead">
-                  <span class="lang-te">పిల్లలకు సురక్షితమైన, సంతోషకరమైన మరియు ఆకర్షణీయమైన రీతిలో బైబిల్ సత్యాలను బోధించడం.</span>
-                  <span class="lang-en">Creating a safe, fun, and engaging environment where kids can learn about Jesus.</span>
-                </p>
-                <p>
-                  <span class="lang-te">ఆదివారం ఆరాధనల సమయంలో పిల్లల కోసం ప్రత్యేకమైన క్లాసులు ఉంటాయి. శిక్షణ పొందిన ఉపాధ్యాయులు ఆటలు, పాటలు మరియు కథల ద్వారా దేవుని వాక్యాన్ని అర్థమయ్యేలా వివరిస్తారు. పిల్లలు ఆధ్యాత్మిక విలువలతో పెరగడానికి మేము తోడ్పడుతాము.</span>
-                  <span class="lang-en">Our dedicated teachers offer interactive lessons, games, and worship during Sunday services. We partner with parents to nurture the seeds of faith in every child's heart.</span>
-                </p>
-                <a href="#contact" class="btn btn-secondary mt-3">
-                  <span class="lang-te">మీ బిడ్డను నమోదు చేయండి</span>
-                  <span class="lang-en">Register Your Child</span>
-                </a>
-              </div>
-              <div class="panel-image">
-                <div class="ministry-icon-decor"><i data-lucide="baby"></i></div>
-                <div class="panel-visual" style="background-color: var(--primary-light-alpha); color: var(--primary);">
-                  <h4>
-                    <span class="lang-te">ఆదివారాలు ఉదయం 9:00 & 11:00 గంటలకు</span>
-                    <span class="lang-en">Sundays at 9:00 & 11:00 AM</span>
-                  </h4>
-                  <p>
-                    <span class="lang-te">ఆరాధన ప్రారంభానికి 15 నిమిషాల ముందే పిల్లల చెక్-ఇన్ ప్రారంభమవుతుంది.</span>
-                    <span class="lang-en">Check-in opens 15 minutes before the service starts.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div class="timings-list">
+          <div class="timing-row">
+            <span class="day-label">
+              <span class="lang-te">ఆదివారం</span>
+              <span class="lang-en">Sunday</span>
+            </span>
+            <span class="time-label">
+              <span class="lang-te">ఉదయం 11:30 నుండి మధ్యాహ్నం 2:00 వరకు</span>
+              <span class="lang-en">11:30 AM to 2:00 PM</span>
+            </span>
           </div>
-
-          <!-- Grace Youth -->
-          <div class="tab-panel" id="tab-youth">
-            <div class="grid-2 align-center">
-              <div class="panel-text">
-                <h3>
-                  <span class="lang-te">గ్రేస్ యూత్ (తరగతులు 6-12)</span>
-                  <span class="lang-en">Grace Youth (Grades 6-12)</span>
-                </h3>
-                <p class="panel-lead">
-                  <span class="lang-te">యవ్వన కాలంలో దేవుని యందు భయభక్తులు కలిగి ఉండి, క్రీస్తులో బలపడేలా యువతను ప్రోత్సహించడం.</span>
-                  <span class="lang-en">Empowering teenagers to discover their identity in Christ and build authentic friendships.</span>
-                </p>
-                <p>
-                  <span class="lang-te">ప్రతి వారం ప్రత్యేక కూడికలు, బైబిల్ స్టడీలు మరియు సరదా ఆటలు ఉంటాయి. యవ్వనస్థులు ఎదుర్కొనే సమస్యల గురించి చర్చించి, దేవుని వాక్యం ద్వారా సరైన మార్గాన్ని చూపడమే మా లక్ష్యం.</span>
-                  <span class="lang-en">We meet weekly for bible studies, fellowship, worship, and group discussions. We address real-life issues with biblical wisdom to guide youth in their daily walk.</span>
-                </p>
-                <a href="#contact" class="btn btn-secondary mt-3">
-                  <span class="lang-te">యువజన కూడికలో చేరండి</span>
-                  <span class="lang-en">Join Youth Groups</span>
-                </a>
-              </div>
-              <div class="panel-image">
-                <div class="ministry-icon-decor"><i data-lucide="sparkles"></i></div>
-                <div class="panel-visual" style="background-color: var(--secondary-light-alpha); color: var(--secondary);">
-                  <h4>
-                    <span class="lang-te">ప్రతి బుధవారం రాత్రి 7:00 గంటలకు</span>
-                    <span class="lang-en">Wednesdays at 7:00 PM</span>
-                  </h4>
-                  <p>
-                    <span class="lang-te">చర్చ్ యూత్ హాల్‌లో ప్రత్యేక హ్యాంగ్అవుట్స్ మరియు ప్రార్థనలు.</span>
-                    <span class="lang-en">In the main youth hall. Fellowship and bible studies.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div class="timing-row">
+            <span class="day-label">
+              <span class="lang-te">बुధవారం/బుధవారం</span>
+              <span class="lang-en">Wednesday</span>
+            </span>
+            <span class="time-label">
+              <span class="lang-te">రాత్రి 8:30 నుండి రాత్రి 10:00 వరకు</span>
+              <span class="lang-en">8:30 PM to 10:00 PM</span>
+            </span>
           </div>
-
-          <!-- Young Adults -->
-          <div class="tab-panel" id="tab-young-adults">
-            <div class="grid-2 align-center">
-              <div class="panel-text">
-                <h3>
-                  <span class="lang-te">యంగ్ అడల్ట్స్ (వయస్సు 18-30)</span>
-                  <span class="lang-en">Young Adults (Ages 18-30)</span>
-                </h3>
-                <p class="panel-lead">
-                  <span class="lang-te">ఉద్యోగ, వివాహ మరియు జీవిత నిర్ణయాలను విశ్వాసంతో తీసుకునేలా యువతీ యువకులకు తోడ్పడటం.</span>
-                  <span class="lang-en">Navigating career, studies, and life decisions in a community committed to Christ.</span>
-                </p>
-                <p>
-                  <span class="lang-te">మా యంగ్ అడల్ట్స్ పరిచర్య నెలవారీ కూడికలు, స్నేహపూర్వక కమ్యూనిటీ సమూహాలు మరియు ప్రత్యేక చర్చలను నిర్వహిస్తుంది. ఇది సమాజంలో క్రైస్తవ సాక్షులుగా ఎలా జీవించాలో నేర్పుతుంది.</span>
-                  <span class="lang-en">We hold monthly small groups, social events, and discussions. A platform for sharing struggles, seeking truth, and serving together in Mumbai.</span>
-                </p>
-                <a href="#contact" class="btn btn-secondary mt-3">
-                  <span class="lang-te">మాతో భాగస్వామ్యం అవ్వండి</span>
-                  <span class="lang-en">Get Connected</span>
-                </a>
-              </div>
-              <div class="panel-image">
-                <div class="ministry-icon-decor"><i data-lucide="compass"></i></div>
-                <div class="panel-visual" style="background-color: var(--accent-light-alpha); color: var(--accent);">
-                  <h4>
-                    <span class="lang-te">ప్రతి మంగళవారం రాత్రి 7:30 గంటలకు</span>
-                    <span class="lang-en">Every Tuesday at 7:30 PM</span>
-                  </h4>
-                  <p>
-                    <span class="lang-te">గృహ కూడికలు మరియు ప్రత్యేక చర్చా సమూహాలు.</span>
-                    <span class="lang-en">House fellowships and local small groups.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Outreach -->
-          <div class="tab-panel" id="tab-outreach">
-            <div class="grid-2 align-center">
-              <div class="panel-text">
-                <h3>
-                  <span class="lang-te">సేవా పరిచర్య & మిషన్లు</span>
-                  <span class="lang-en">Outreach & Missions</span>
-                </h3>
-                <p class="panel-lead">
-                  <span class="lang-te">మన సమాజానికి సేవ చేయడం మరియు క్రీస్తు సువార్తను అందరికీ పంచడం.</span>
-                  <span class="lang-en">Serving our local community and sharing the hope of Christ in Mumbai.</span>
-                </p>
-                <p>
-                  <span class="lang-te">మేము ముంబై నగరంలోని అనాథ శరణాలయాలు, పేదల అవసరాలకు తోడ్పడుతూ సేవా కార్యక్రమాలను నిర్వహిస్తాము. వారపు ఆహార పంపిణీతో పాటు స్వచ్ఛంద వైద్య శిబిరాలు, సహాయ కార్యక్రమాలు ఉన్నాయి.</span>
-                  <span class="lang-en">We partner with local shelters, organize food drives, and support medical camps. We believe faith expresses itself through love and practical assistance to those in need.</span>
-                </p>
-                <a href="#contact" class="btn btn-secondary mt-3">
-                  <span class="lang-te">స్వచ్ఛంద సేవకుడిగా చేరండి</span>
-                  <span class="lang-en">Volunteer Now</span>
-                </a>
-              </div>
-              <div class="panel-image">
-                <div class="ministry-icon-decor"><i data-lucide="globe"></i></div>
-                <div class="panel-visual" style="background-color: var(--success-light-alpha); color: var(--success-color);">
-                  <h4>
-                    <span class="lang-te">శనివారపు సేవా ప్రాజెక్టులు</span>
-                    <span class="lang-en">Saturday Projects</span>
-                  </h4>
-                  <p>
-                    <span class="lang-te">నెలవారీ సిటీ-వైడ్ సహాయ ప్రాజెక్టులలో మాతో కలిసి పనిచేయండి.</span>
-                    <span class="lang-en">Join our monthly community service initiatives.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div class="timing-row">
+            <span class="day-label">
+              <span class="lang-te">शुक्रవారం/శుక్రవారం</span>
+              <span class="lang-en">Friday</span>
+            </span>
+            <span class="time-label">
+              <span class="lang-te">మధ్యాహ్నం 2:30 నుండి సాయంత్రం 5:00 వరకు</span>
+              <span class="lang-en">2:30 PM to 5:00 PM</span>
+            </span>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Events Section -->
-    <section class="events-section section-padding bg-alt" id="events">
-      <div class="container text-center mb-5">
-        <h2 class="section-title">
-          <span class="lang-te">రాబోయే కార్యక్రమాలు</span>
-          <span class="lang-en">Upcoming Events</span>
+      <hr class="card-divider">
+
+      <!-- Location Section -->
+      <div class="card-section">
+        <h2 class="section-title-sm">
+          <i data-lucide="map-pin" class="section-icon"></i>
+          <span class="lang-te">మా చిరునామా</span>
+          <span class="lang-en">Our Location</span>
         </h2>
-        <p class="section-subtitle">
-          <span class="lang-te">తేదీలు గుర్తుంచుకోండి! మా ఆంధ్ర క్రిస్టియన్ చర్చ్‌లో జరిగే ప్రత్యేక కార్యక్రమాలు.</span>
-          <span class="lang-en">Mark your calendars! Be a part of these special events and gatherings.</span>
+        <p class="address-text">
+          <span class="lang-te">పంప్ హౌస్, 93, జీజామాతా రోడ్, సాల్సెట్ పార్సీ కాలనీ, అంధేరి ఈస్ట్, ముంబై, మహారాష్ట్ర 400093</span>
+          <span class="lang-en">Pump House, 93, Jijamata Rd, Salsette Parsi Colony, Andheri East, Mumbai, Maharashtra 400093</span>
         </p>
+        <a href="https://www.google.com/maps/place/Andhra+Christian+Church+(%E0%B0%A4%E0%B1%86%E0%B0%B2%E0%B1%81%E0%B0%97%E0%B1%81)/@19.1262802,72.8568212,17z" target="_blank" rel="noopener noreferrer" class="btn btn-primary map-action-btn">
+          <i data-lucide="navigation" class="inline-icon-xs mr-2"></i>
+          <span class="lang-te">దారి మ్యాప్ చూడండి</span>
+          <span class="lang-en">Get Directions</span>
+        </a>
       </div>
 
-      <div class="container grid-3 events-grid">
-        <!-- Event Card 1 -->
-        <div class="event-card reveal">
-          <div class="event-date">
-            <span class="day">15</span>
-            <span class="month">
-              <span class="lang-te">జులై</span>
-              <span class="lang-en">Jul</span>
-            </span>
-          </div>
-          <div class="event-details">
-            <span class="event-tag tag-youth">
-              <span class="lang-te">యువత</span>
-              <span class="lang-en">Youth</span>
-            </span>
-            <h3>
-              <span class="lang-te">వేసవి యువజన శిబిరం</span>
-              <span class="lang-en">Summer Youth Camp</span>
-            </h3>
-            <p class="event-time">
-              <i data-lucide="clock" class="inline-icon-xs"></i> 
-              <span class="lang-te">ఉదయం 9:00 - సాయంత్రం 5:00</span>
-              <span class="lang-en">9:00 AM - 5:00 PM</span>
-            </p>
-            <p class="event-desc">
-              <span class="lang-te">టీనేజర్ల కోసం ఐదు రోజుల ప్రత్యేక శిబిరం. ప్రార్థనలు, దైవిక సందేశాలు, ఆటలు మరియు నూతన స్నేహాలు ఉంటాయి.</span>
-              <span class="lang-en">A dynamic five-day summer experience filled with interactive bible sessions, music, and activities.</span>
-            </p>
-            <a href="#contact" class="event-action-link">
-              <span class="lang-te">రిజిస్ట్రేషన్ <i data-lucide="arrow-up-right" class="inline-icon-xs"></i></span>
-              <span class="lang-en">Register Online <i data-lucide="arrow-up-right" class="inline-icon-xs"></i></span>
-            </a>
-          </div>
-        </div>
+      <hr class="card-divider">
 
-        <!-- Event Card 2 -->
-        <div class="event-card reveal">
-          <div class="event-date">
-            <span class="day">22</span>
-            <span class="month">
-              <span class="lang-te">జులై</span>
-              <span class="lang-en">Jul</span>
-            </span>
+      <!-- Contact Info Section -->
+      <div class="card-section">
+        <h2 class="section-title-sm">
+          <i data-lucide="phone" class="section-icon"></i>
+          <span class="lang-te">సంప్రదించండి</span>
+          <span class="lang-en">Contact Info</span>
+        </h2>
+        <div class="contact-details">
+          <div class="contact-line">
+            <span class="contact-label"><i data-lucide="mail"></i></span>
+            <a href="mailto:hello@andhrachristianchurch.in" class="contact-link">hello@andhrachristianchurch.in</a>
           </div>
-          <div class="event-details">
-            <span class="event-tag tag-community">
-              <span class="lang-te">సేవ</span>
-              <span class="lang-en">Outreach</span>
-            </span>
-            <h3>
-              <span class="lang-te">ఆహార పంపిణీ సేవ</span>
-              <span class="lang-en">Community Food Drive</span>
-            </h3>
-            <p class="event-time">
-              <i data-lucide="clock" class="inline-icon-xs"></i> 
-              <span class="lang-te">ఉదయం 10:00 - మధ్యాహ్నం 2:00</span>
-              <span class="lang-en">10:00 AM - 2:00 PM</span>
-            </p>
-            <p class="event-desc">
-              <span class="lang-te">స్థానిక నిరుపేద కుటుంబాలకు అవసరమైన నిత్యావసర వస్తువులు మరియు భోజనం అందించడానికి మాతో స్వచ్ఛందంగా చేరండి.</span>
-              <span class="lang-en">Join us in packing and distributing food packs to underprivileged families in Andheri.</span>
-            </p>
-            <a href="#contact" class="event-action-link">
-              <span class="lang-te">స్వచ్ఛంద నమోదు <i data-lucide="arrow-up-right" class="inline-icon-xs"></i></span>
-              <span class="lang-en">Sign Up to Help <i data-lucide="arrow-up-right" class="inline-icon-xs"></i></span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Event Card 3 -->
-        <div class="event-card reveal">
-          <div class="event-date">
-            <span class="day">05</span>
-            <span class="month">
-              <span class="lang-te">ఆగ</span>
-              <span class="lang-en">Aug</span>
-            </span>
-          </div>
-          <div class="event-details">
-            <span class="event-tag tag-worship">
-              <span class="lang-te">ఆరాధన</span>
-              <span class="lang-en">Worship</span>
-            </span>
-            <h3>
-              <span class="lang-te">ఆరాధన & ప్రార్థన రాత్రి</span>
-              <span class="lang-en">Worship & Prayer Night</span>
-            </h3>
-            <p class="event-time">
-              <i data-lucide="clock" class="inline-icon-xs"></i> 
-              <span class="lang-te">రాత్రి 7:00 - 8:30</span>
-              <span class="lang-en">7:00 PM - 8:30 PM</span>
-            </p>
-            <p class="event-desc">
-              <span class="lang-te">మహిమగల ఆరాధన, దేవుని వాక్య ధ్యానము మరియు ప్రత్యేక ప్రార్థనల రాత్రి. అందరికీ ఆహ్వానం.</span>
-              <span class="lang-en">An evening dedicated to praise, reflection, and community prayers in our main sanctuary.</span>
-            </p>
-            <a href="#contact" class="event-action-link">
-              <span class="lang-te">మరింత సమాచారం <i data-lucide="arrow-up-right" class="inline-icon-xs"></i></span>
-              <span class="lang-en">More Details <i data-lucide="arrow-up-right" class="inline-icon-xs"></i></span>
-            </a>
+          <div class="contact-line">
+            <span class="contact-label"><i data-lucide="phone-call"></i></span>
+            <a href="tel:02298765432" class="contact-link">022-98765432</a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Giving Section -->
-    <section class="giving-section section-padding" id="giving">
-      <div class="container grid-2 align-center">
-        <div class="giving-text reveal">
-          <h2 class="section-title">
-            <span class="lang-te">దేవుని పరిచర్యకు సహాయం చేయండి</span>
-            <span class="lang-en">Support the Mission</span>
-          </h2>
-          <p class="section-lead">
-            <span class="lang-te">మీ ఉదారత మన సమాజంలో మార్పు తీసుకురావడానికి మరియు సువార్త నిరీక్షణను పంచడానికి ఉపయోగపడుతుంది.</span>
-            <span class="lang-en">Your generosity enables us to serve families and share the hope of Christ in Mumbai and beyond.</span>
-          </p>
-          <p>
-            <span class="lang-te">కానుకలు ఇవ్వడం అనేది దేవునికి మనం సమర్పించే ఆరాధనగా మరియు ఆయన పోషణ పట్ల మనకున్న నమ్మకంగా భావిస్తాము. మీ కానుకలు ఈ ఆంధ్ర క్రిస్టియన్ చర్చ్ సేవా విస్తరణకు ఎంతో దోహదపడతాయి. మీ నమ్మకమైన సహాయానికి ధన్యవాదాలు!</span>
-            <span class="lang-en">We believe giving is an act of worship and trust in God's provision. Every gift, big or small, helps support the ministries, maintenance, and community projects of Andhra Christian Church.</span>
-          </p>
-          <div class="giving-methods">
-            <div class="method-item">
-              <i data-lucide="credit-card"></i>
-              <span>
-                <span class="lang-te">ఆన్‌లైన్ కార్డ్ పేమెంట్ (సురక్షితం)</span>
-                <span class="lang-en">Secure Online Card/Net Banking</span>
-              </span>
-            </div>
-            <div class="method-item">
-              <i data-lucide="phone-call"></i>
-              <span>
-                <span class="lang-te">మొబైల్ ఫోన్ పే ద్వారా: +91 98765 43210</span>
-                <span class="lang-en">GPay / PhonePe: +91 98765 43210</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Interactive Giving Widget -->
-        <div class="giving-widget-card reveal">
-          <div class="widget-header">
-            <h3>
-              <span class="lang-te">ఆన్‌లైన్ కానుకలు</span>
-              <span class="lang-en">Online Giving</span>
-            </h3>
-            <p>
-              <span class="lang-te">సురక్షితమైనది, వేగవంతమైనది మరియు సులువైనది</span>
-              <span class="lang-en">Secure, fast, and convenient</span>
-            </p>
-          </div>
-          <div class="widget-body">
-            <!-- Frequency toggle -->
-            <div class="giving-frequency-toggle">
-              <button class="freq-btn active" id="freq-one-time">
-                <span class="lang-te">ఒక్కసారి</span>
-                <span class="lang-en">One-time</span>
-              </button>
-              <button class="freq-btn" id="freq-monthly">
-                <span class="lang-te">ప్రతి నెల</span>
-                <span class="lang-en">Monthly</span>
-              </button>
-            </div>
-
-            <!-- Amount quick selector -->
-            <div class="amount-selector">
-              <button class="amount-btn" data-val="100">₹100</button>
-              <button class="amount-btn active" data-val="500">₹500</button>
-              <button class="amount-btn" data-val="1000">₹1000</button>
-              <button class="amount-btn" data-val="2000">₹2000</button>
-              <button class="amount-btn" data-val="5000">₹5000</button>
-              <button class="amount-btn" id="btn-custom" data-val="custom">
-                <span class="lang-te">ఇతర మొత్తం</span>
-                <span class="lang-en">Custom</span>
-              </button>
-            </div>
-
-            <!-- Custom amount input -->
-            <div class="custom-amount-container" id="custom-amount-container" style="display: none;">
-              <div class="amount-input-wrapper">
-                <span class="currency-symbol">₹</span>
-                <input type="number" id="custom-amount-input" placeholder="మొత్తాన్ని నమోదు చేయండి..." min="10">
-              </div>
-            </div>
-
-            <div class="selected-amount-display">
-              <span class="lang-te">మొత్తం కానుక: <strong id="selected-total-val">₹500</strong> <span id="selected-freq-val">ఒక్కసారి</span></span>
-              <span class="lang-en" style="display: none;">Giving Total: <strong id="selected-total-val-en">₹500</strong> <span id="selected-freq-val-en">once</span></span>
-            </div>
-
-            <button class="btn btn-primary w-full text-center mt-3 py-3" id="btn-submit-giving">
-              <i data-lucide="shield-check" class="inline-icon"></i> 
-              <span class="lang-te">కానుకను పంపండి</span>
-              <span class="lang-en">Process Gift</span>
-            </button>
-            <p class="widget-secure-note">
-              <i data-lucide="lock" class="inline-icon-xs"></i> 
-              <span class="lang-te">SSL ఎన్‌క్రిప్ట్ చేయబడింది & సురక్షితం</span>
-              <span class="lang-en">SSL Encrypted & Secured</span>
-            </p>
-          </div>
-
-          <!-- Giving Success Overlay -->
-          <div class="giving-success-overlay" id="giving-success-overlay">
-            <div class="success-content">
-              <div class="success-icon-wrapper">
-                <i data-lucide="check-circle-2"></i>
-              </div>
-              <h3 class="lang-te">ధన్యవాదాలు!</h3>
-              <h3 class="lang-en">Thank You!</h3>
-              <p class="lang-te">మీ కానుక మొత్తం <strong id="success-amount-val">₹500</strong> విజయవంతంగా సమర్పించబడింది.</p>
-              <p class="lang-en">Your gift of <strong id="success-amount-val-en">₹500</strong> has been processed successfully.</p>
-              <p class="text-muted">
-                <span class="lang-te">మీ ఈమెయిల్ ఐడీకి రసీదు పంపబడింది.</span>
-                <span class="lang-en">A receipt has been sent to your email.</span>
-              </p>
-              <button class="btn btn-secondary btn-sm mt-4" id="btn-reset-giving">
-                <span class="lang-te">మరలా కానుక ఇవ్వండి</span>
-                <span class="lang-en">Give Again</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Form & Location Section -->
-    <section class="contact-section section-padding bg-alt" id="contact">
-      <div class="container grid-2">
-        <div class="contact-info-block reveal">
-          <h2 class="section-title">
-            <span class="lang-te">మమ్మల్ని సంప్రదించండి</span>
-            <span class="lang-en">Get in Touch</span>
-          </h2>
-          <p class="section-lead">
-            <span class="lang-te">మీకు ఏదైనా సమాచారం కావలసినా, లేదా ప్రార్థన అభ్యర్థనలు ఉన్నా మమ్మల్ని సంప్రదించవచ్చు.</span>
-            <span class="lang-en">Have questions, need prayer, or want to say hello? Reach out directly.</span>
-          </p>
-          
-          <div class="contact-details-list">
-            <div class="contact-detail-item">
-              <div class="cd-icon"><i data-lucide="mail"></i></div>
-              <div class="cd-text">
-                <h4>
-                  <span class="lang-te">ఈమెయిల్ చిరునామా</span>
-                  <span class="lang-en">Email Address</span>
-                </h4>
-                <p>hello@andhrachristianchurch.in</p>
-              </div>
-            </div>
-            <div class="contact-detail-item">
-              <div class="cd-icon"><i data-lucide="phone"></i></div>
-              <div class="cd-text">
-                <h4>
-                  <span class="lang-te">ఫోన్ నంబర్</span>
-                  <span class="lang-en">Phone Number</span>
-                </h4>
-                <p>022-98765432</p>
-              </div>
-            </div>
-            <div class="contact-detail-item">
-              <div class="cd-icon"><i data-lucide="clock"></i></div>
-              <div class="cd-text">
-                <h4>
-                  <span class="lang-te">కార్యాలయ సమయాలు</span>
-                  <span class="lang-en">Office Hours</span>
-                </h4>
-                <p>
-                  <span class="lang-te">సోమ - గురు: ఉదయం 9:00 - సాయంత్రం 4:00</span>
-                  <span class="lang-en">Mon - Thu: 9:00 AM - 4:00 PM</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Interactive Contact Form -->
-        <div class="contact-form-card reveal">
-          <form id="church-contact-form">
-            <div class="form-group-row">
-              <div class="form-group">
-                <label for="contact-name">
-                  <span class="lang-te">మీ పేరు</span>
-                  <span class="lang-en">Your Name</span>
-                </label>
-                <input type="text" id="contact-name" placeholder="John Doe" required>
-              </div>
-              <div class="form-group">
-                <label for="contact-email">
-                  <span class="lang-te">ఈమెయిల్ చిరునామా</span>
-                  <span class="lang-en">Email Address</span>
-                </label>
-                <input type="email" id="contact-email" placeholder="john@example.com" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="contact-subject">
-                <span class="lang-te">మేము ఏ విధంగా సహాయపడగలము?</span>
-                <span class="lang-en">How can we help?</span>
-              </label>
-              <select id="contact-subject" required>
-                <!-- Telugu options -->
-                <option class="lang-te" value="" disabled selected>ఒక ఆప్షన్ ఎంచుకోండి</option>
-                <option class="lang-te" value="visit">చర్చి సందర్శన ప్లాన్ చేయడం</option>
-                <option class="lang-te" value="prayer">ప్రార్థన అభ్యర్థన</option>
-                <option class="lang-te" value="groups">ప్రార్థన కూడికలలో చేరడం</option>
-                <option class="lang-te" value="volunteer">సేవా కార్యక్రమాల్లో పాల్గొనడం</option>
-                <option class="lang-te" value="other">ఇతర సమాచారం</option>
-                
-                <!-- English options -->
-                <option class="lang-en" value="" disabled selected>Select an option</option>
-                <option class="lang-en" value="visit">Planning a visit</option>
-                <option class="lang-en" value="prayer">Prayer Request</option>
-                <option class="lang-en" value="groups">Joining a Small Group</option>
-                <option class="lang-en" value="volunteer">Volunteering</option>
-                <option class="lang-en" value="other">General Inquiry</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="contact-message">
-                <span class="lang-te">మీ సందేశం</span>
-                <span class="lang-en">Message</span>
-              </label>
-              <textarea id="contact-message" rows="5" placeholder="Write to us..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-full text-center" id="btn-submit-contact">
-              <span class="lang-te">సందేశాన్ని పంపండి <i data-lucide="send" class="inline-icon"></i></span>
-              <span class="lang-en">Send Message <i data-lucide="send" class="inline-icon"></i></span>
-            </button>
-          </form>
-
-          <!-- Contact Success State -->
-          <div class="contact-success-state" id="contact-success-state">
-            <div class="success-content">
-              <div class="success-icon-circle">
-                <i data-lucide="mail-check"></i>
-              </div>
-              <h3 class="lang-te">సందేశం విజయవంతంగా పంపబడింది!</h3>
-              <h3 class="lang-en">Message Sent!</h3>
-              <p class="lang-te">మమ్మల్ని సంప్రదించినందుకు ధన్యవాదాలు. ఆంధ్ర క్రిస్టియన్ చర్చ్ బృందం త్వరలోనే మిమ్మల్ని సంప్రదిస్తుంది.</p>
-              <p class="lang-en">Thank you for reaching out. A team member from our church will get back to you shortly.</p>
-              <button class="btn btn-secondary btn-sm mt-3" id="btn-reset-contact">
-                <span class="lang-te">మరొక సందేశాన్ని పంపండి</span>
-                <span class="lang-en">Send Another Message</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="logo">
-            <span class="logo-icon"><i data-lucide="cross"></i></span>
-            <span class="logo-text">
-              <span class="lang-te">ఆంధ్ర క్రిస్టియన్ చర్చ్</span>
-              <span class="lang-en">Andhra Christian Church</span>
-            </span>
-          </a>
-          <p class="footer-desc mt-3">
-            <span class="lang-te">ముంబైలోని అంధేరి ఈస్ట్‌లో తెలుగు క్రైస్తవ విశ్వాసుల కోసం ఆరాధనలను అందిస్తున్న ఏకైక చర్చ్, దేవుణ్ణి ప్రేమించడానికి మరియు ప్రజలను ప్రేమించడానికి అంకితం చేయబడింది.</span>
-            <span class="lang-en">A welcoming church in Andheri East, Mumbai, dedicated to serving the Telugu community, loving God, and loving people.</span>
-          </p>
-        </div>
-        <div class="footer-links-col">
-          <h4>
-            <span class="lang-te">శీఘ్ర లింకులు</span>
-            <span class="lang-en">Quick Links</span>
-          </h4>
-          <ul>
-            <li><a href="#about"><span class="lang-te">మన గురించి</span><span class="lang-en">About Us</span></a></li>
-            <li><a href="#sermons"><span class="lang-te">ప్రసంగాలు</span><span class="lang-en">Sermons</span></a></li>
-            <li><a href="#ministries"><span class="lang-te">పరిచర్యలు</span><span class="lang-en">Ministries</span></a></li>
-            <li><a href="#events"><span class="lang-te">కార్యక్రమాలు</span><span class="lang-en">Events</span></a></li>
-            <li><a href="#giving"><span class="lang-te">కానుకలు</span><span class="lang-en">Giving</span></a></li>
-          </ul>
-        </div>
-        <div class="footer-links-col">
-          <h4>
-            <span class="lang-te">మాతో చేరండి</span>
-            <span class="lang-en">Connect</span>
-          </h4>
-          <ul>
-            <li><a href="#contact"><span class="lang-te">ఆరాధనలకు రండి</span><span class="lang-en">Plan Your Visit</span></a></li>
-            <li><a href="#contact"><span class="lang-te">ప్రార్థన అభ్యర్థనలు</span><span class="lang-en">Prayer Request</span></a></li>
-            <li><a href="#contact"><span class="lang-te">సమూహాలలో చేరండి</span><span class="lang-en">Join a Group</span></a></li>
-            <li><a href="#contact"><span class="lang-te">స్వచ్ఛంద సేవ</span><span class="lang-en">Serve With Us</span></a></li>
-          </ul>
-        </div>
-        <div class="footer-links-col">
-          <h4>
-            <span class="lang-te">ఆరాధన సమయం</span>
-            <span class="lang-en">Service Times</span>
-          </h4>
-          <p class="footer-text-light">
-            <span class="lang-te">ప్రతి ఆదివారం ఉదయం 9:00 & 11:00 గంటలకు</span>
-            <span class="lang-en">Sundays at 9:00 AM & 11:00 AM</span>
-          </p>
-          <p class="footer-text-muted mt-2">
-            <span class="lang-te">పంప్ హౌస్, 93, జీజామాతా రోడ్,<br>అంధేరి ఈస్ట్, ముంబై - 400093</span>
-            <span class="lang-en">Pump House, 93, Jijamata Rd,<br>Andheri East, Mumbai - 400093</span>
-          </p>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
+      <!-- Copyright -->
+      <footer class="card-footer">
         <p>
-          <span class="lang-te">&copy; 2026 ఆంధ్ర క్రిస్టియన్ చర్చ్. అన్ని హక్కులు ప్రత్యేకించబడ్డాయి. దైవ కృపతో నిర్మించబడింది.</span>
-          <span class="lang-en">&copy; 2026 Andhra Christian Church. All rights reserved. Designed with Grace.</span>
+          <span class="lang-te">&copy; 2026 ఆంధ్ర క్రిస్టియన్ చర్చ్. అన్ని హక్కులు ప్రత్యేకించబడ్డాయి.</span>
+          <span class="lang-en">&copy; 2026 Andhra Christian Church. All rights reserved.</span>
         </p>
-        <div class="social-links">
-          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
-        </div>
-      </div>
+      </footer>
     </div>
-  </footer>
+  </main>
 
   <script src="app.js"></script>
 </body>
