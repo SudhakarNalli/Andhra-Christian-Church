@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const durationStr = item.getAttribute('data-duration');
 
       sermonTitle.textContent = title;
-      sermonSpeaker.textContent = `${speaker} • Series: Faith & Grace`;
+      sermonSpeaker.textContent = `${speaker} • సిరీస్: విశ్వాసం & కృప`;
       sermonDuration = parseDurationString(durationStr);
       currentTime = 0;
       
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const successAmountVal = document.getElementById('success-amount-val');
   const btnResetGiving = document.getElementById('btn-reset-giving');
 
-  let selectedAmount = 25; // default active button
+  let selectedAmount = 500; // default active button
   let selectedFrequency = 'one-time';
 
   // Toggle amount selections
@@ -283,26 +283,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function updateGivingTotalDisplay() {
-    selectedTotalVal.textContent = `$${selectedAmount}`;
-    selectedFreqVal.textContent = selectedFrequency === 'monthly' ? 'monthly' : 'once';
+    selectedTotalVal.textContent = `₹${selectedAmount}`;
+    selectedFreqVal.textContent = selectedFrequency === 'monthly' ? 'ప్రతి నెల' : 'ఒక్కసారి';
   }
 
   // Submit Donation
   btnSubmitGiving.addEventListener('click', () => {
     if (selectedAmount <= 0) {
-      alert('Please select or input a valid donation amount.');
+      alert('దయచేసి సరైన కానుక మొత్తాన్ని నమోదు చేయండి.');
       return;
     }
 
     // Show simulated loading status
     const btnOriginalContent = btnSubmitGiving.innerHTML;
     btnSubmitGiving.disabled = true;
-    btnSubmitGiving.innerHTML = '<i data-lucide="loader" class="inline-icon animate-spin"></i> Processing...';
+    btnSubmitGiving.innerHTML = '<i data-lucide="loader" class="inline-icon animate-spin"></i> ప్రాసెస్ చేయబడుతోంది...';
     lucide.createIcons();
 
     setTimeout(() => {
       // Show success overlay
-      successAmountVal.textContent = `$${selectedAmount}${selectedFrequency === 'monthly' ? '/mo' : ''}`;
+      successAmountVal.textContent = `₹${selectedAmount}${selectedFrequency === 'monthly' ? '/నెల' : ''}`;
       givingSuccessOverlay.classList.add('show');
       
       // Reset button state
@@ -316,16 +316,16 @@ document.addEventListener('DOMContentLoaded', () => {
   btnResetGiving.addEventListener('click', () => {
     givingSuccessOverlay.classList.remove('show');
     
-    // Reset to default $25 once
+    // Reset to default ₹500 once
     amountBtns.forEach(b => b.classList.remove('active'));
-    amountBtns[1].classList.add('active'); // $25 button
+    amountBtns[1].classList.add('active'); // ₹500 button
     customAmountContainer.style.display = 'none';
     customAmountInput.value = '';
     
     freqOneTime.classList.add('active');
     freqMonthly.classList.remove('active');
     
-    selectedAmount = 25;
+    selectedAmount = 500;
     selectedFrequency = 'one-time';
     updateGivingTotalDisplay();
   });
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show loading state
     const btnOriginalText = btnSubmitContact.innerHTML;
     btnSubmitContact.disabled = true;
-    btnSubmitContact.innerHTML = '<i data-lucide="loader" class="inline-icon animate-spin"></i> Sending...';
+    btnSubmitContact.innerHTML = '<i data-lucide="loader" class="inline-icon animate-spin"></i> పంపబడుతోంది...';
     lucide.createIcons();
 
     setTimeout(() => {

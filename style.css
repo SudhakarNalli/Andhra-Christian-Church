@@ -4,8 +4,8 @@
 
 :root {
   /* Fonts */
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Ramabhadra', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Noto Sans Telugu', 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Color Palette - Light Theme (Default) */
   --bg-primary: #F8FAFC;
