@@ -1138,3 +1138,56 @@ html[lang="te"] body {
         font-size: 0.75rem;
     }
 }
+
+/* Toast Notification Styling */
+.toast-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    pointer-events: none;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--success);
+    box-shadow: var(--shadow-lg);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+    pointer-events: auto;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.toast-icon {
+    color: var(--success);
+    display: flex;
+    align-items: center;
+}
+
+.toast-icon i {
+    width: 20px;
+    height: 20px;
+}
+
+.toast-message {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+

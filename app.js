@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Send data to FormSubmit via AJAX
-            fetch("https://formsubmit.co/ajax/andhrachristianchurch@gmail.com", {
+            fetch("https://formsubmit.co/ajax/nallisudhakar85@gmail.com", {
                 method: "POST",
                 headers: { 
                     'Content-Type': 'application/json',
@@ -362,6 +362,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     lucide.createIcons();
                 }
 
+                // Show success toast
+                const toastMsg = translations[currentLang]?.contact_toast_success || "Message sent successfully!";
+                showToast(toastMsg);
+
                 contactForm.style.opacity = '0';
                 setTimeout(() => {
                     contactForm.style.display = 'none';
@@ -370,12 +374,16 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => {
                 console.error('Error submitting form:', error);
-                // Fallback: show the success message anyway to ensure good user experience
+                // Fallback: show toast and success message anyway to ensure good user experience
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = `<span>${labelOriginal}</span><i data-lucide="send"></i>`;
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
                 }
+                
+                const toastMsg = translations[currentLang]?.contact_toast_success || "Message sent successfully!";
+                showToast(toastMsg);
+
                 contactForm.style.opacity = '0';
                 setTimeout(() => {
                     contactForm.style.display = 'none';
@@ -394,5 +402,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 contactForm.style.opacity = '1';
             }, 50);
         });
+    }
+
+    // --- Success Toast Helper ---
+    function showToast(message) {
+        let container = document.getElementById('toast-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'toast-container';
+            container.className = 'toast-container';
+            document.body.appendChild(container);
+        }
+        
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML = `
+            <div class="toast-icon">
+                <i data-lucide="check-circle-2"></i>
+            </div>
+            <div class="toast-message">${message}</div>
+        `;
+        
+        container.appendChild(toast);
+        
+        // Initialize the new icon in the toast element
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons({
+                attrs: {
+                    class: 'lucide-icon'
+                },
+                nameAttr: 'data-lucide',
+                node: toast
+            });
+        }
+
+        // Force reflow to enable CSS transition
+        toast.offsetHeight;
+        
+        toast.classList.add('show');
+        
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                toast.remove();
+            }, 400);
+        }, 4000);
     }
 });

@@ -85,6 +85,7 @@ const translations = {
         contact_success_title: "Thank You!",
         contact_success_desc: "Your message has been received. Our prayer team and pastors will pray for you. If you requested contact, we will get back to you shortly.",
         contact_btn_reset: "Send Another Message",
+        contact_toast_success: "Message sent successfully!",
 
         // Footer
         footer_subtitle: "Pumphouse, Andheri East, Mumbai",
@@ -187,6 +188,7 @@ const translations = {
         contact_success_title: "ధన్యవాదాలు!",
         contact_success_desc: "మీ సందేశం అందింది. మా ప్రార్థనా బృందం మరియు పాస్టర్లు మీ కోసం ప్రార్థిస్తారు. అవసరమైతే మేము మిమ్మల్ని త్వరలో సంప్రదిస్తాము.",
         contact_btn_reset: "మరో సందేశం పంపండి",
+        contact_toast_success: "సందేశం విజయవంతంగా పంపబడింది!",
 
         // Footer
         footer_subtitle: "పంప్‌హౌస్, అంధేరి ఈస్ట్, ముంబై",
