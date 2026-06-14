@@ -153,26 +153,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Gathering Scheduler Data ---
     const services = [
         {
-            id: 'service-sunday-school',
-            name: 'Sunday School',
-            day: 0,
-            start: '09:00',
-            end: '11:00',
-            elementId: 'service-sunday-school'
-        },
-        {
             id: 'service-sunday-worship',
             name: 'Sunday Worship',
             day: 0,
-            start: '11:00',
+            start: '11:30',
             end: '14:00',
             elementId: 'service-sunday-worship'
         },
         {
             id: 'service-wednesday-prayer',
-            name: 'Youth Prayer',
+            name: 'Youth Meeting',
             day: 3,
-            start: '20:00',
+            start: '20:30',
             end: '22:00',
             elementId: 'service-wednesday-prayer'
         },
@@ -180,8 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'service-friday-meeting',
             name: 'Womens Fellowship',
             day: 5,
-            start: '15:00',
-            end: '18:00',
+            start: '14:30',
+            end: '17:00',
             elementId: 'service-friday-meeting'
         }
     ];

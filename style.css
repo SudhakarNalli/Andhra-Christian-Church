@@ -1087,7 +1087,7 @@ section {
 
 /* Language Switcher Styles */
 .lang-selector {
-    display: flex;
+    display: none;
     align-items: center;
     background-color: var(--bg-base);
     border: 1px solid var(--border-color);
